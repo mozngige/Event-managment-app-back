@@ -13,3 +13,132 @@ Migrating to CreateUsers (20221020085515)
   [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCategories (20221020091547)
+  [1m[35m (430.4ms)[0m  [1m[35mDROP TABLE `categories`[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (74.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20221020091547'[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20221020085515)
+  [1m[35m (270.6ms)[0m  [1m[35mDROP TABLE `users`[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (57.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20221020085515'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (86.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20221020085515)
+  [1m[35m (371.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `password_digest` varchar(255), `is_organiser` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221020085515')[0m
+  [1m[36mTRANSACTION (64.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20221020091547)
+  [1m[35m (499.0ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221020091547')[0m
+  [1m[36mTRANSACTION (290.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserProfiles (20221021182342)
+  [1m[35m (437.8ms)[0m  [1m[35mCREATE TABLE `user_profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `full_name` varchar(255), `avatar_img` varchar(255), `phone_number` varchar(255), `bio` text, `gender` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221021182342')[0m
+  [1m[36mTRANSACTION (150.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('kihahumutagah@gmail.com', '$2a$12$o6Z7E3WE5kguEtAFXYmeOum5SkVMwA9e0npkRobPqpI5Y5Z6cE6Ae', FALSE, '2022-10-21 18:45:45.281800', '2022-10-21 18:45:45.281800')[0m
+  [1m[36mTRANSACTION (207.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('jeskajenipher@gmail.com', '$2a$12$9aO.2RgM22fHF49lYOEuCuybLoPvpn/3zSEmxUfjMygIxjwm5T8xm', TRUE, '2022-10-21 18:45:45.755038', '2022-10-21 18:45:45.755038')[0m
+  [1m[36mTRANSACTION (97.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('keithwesley@gmail.com', '$2a$12$rR8.xOHQnd8IvsLEsOPene4C/kQUDI8PhOrZDh/G6JFMPfYHIjtQG', TRUE, '2022-10-21 18:45:46.139885', '2022-10-21 18:45:46.139885')[0m
+  [1m[36mTRANSACTION (77.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('nyalemwasaha@gmail.com', '$2a$12$CyDyYAp9ETG4nNcFzu9iK.rfvyU94RjQw9fsjf1Eo6ONBXTKw4tAO', FALSE, '2022-10-21 18:45:46.536152', '2022-10-21 18:45:46.536152')[0m
+  [1m[36mTRANSACTION (80.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('kibirafrancis@gmail.com', '$2a$12$fr3SUQwXxXCdGlPCrGk6ROTktJWe/ASJssdg6raQ0intVq.TKrIli', FALSE, '2022-10-21 18:45:46.925822', '2022-10-21 18:45:46.925822')[0m
+  [1m[36mTRANSACTION (79.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1367.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `ticketing_rails`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `ticketing_rails` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `categories` CASCADE[0m
+  [1m[35m (419.7ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `user_profiles` CASCADE[0m
+  [1m[35m (352.6ms)[0m  [1m[35mCREATE TABLE `user_profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `full_name` varchar(255), `avatar_img` varchar(255), `phone_number` varchar(255), `bio` text, `gender` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (343.3ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `password_digest` varchar(255), `is_organiser` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4[0m
+  [1m[35m (450.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (89.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20221021182342)[0m
+  [1m[35m (96.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20221020085515),
+(20221020091547);
+
+[0m
+  [1m[35m (843.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-10-21 19:06:24.005326', '2022-10-21 19:06:24.005326')[0m
+  [1m[36mTRANSACTION (49.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '8fb51f7d7b468a7b1e15a737a68a2010eeec0021', '2022-10-21 19:06:24.076011', '2022-10-21 19:06:24.076011')[0m
+  [1m[36mTRANSACTION (94.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (76.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('kihahumutagah@gmail.com', '$2a$12$N8RcZqbPcOu4Jx174af9TeN6.jTF0lvOsG75V.j19Jt.c4pboTwqS', FALSE, '2022-10-21 19:06:24.630683', '2022-10-21 19:06:24.630683')[0m
+  [1m[36mTRANSACTION (76.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('jeskajenipher@gmail.com', '$2a$12$9H7LbtxsGYRAPKUTsRObvu9080ziu2bRMEBWRuBwpW9JUa4vzE7ku', TRUE, '2022-10-21 19:06:25.034622', '2022-10-21 19:06:25.034622')[0m
+  [1m[36mTRANSACTION (115.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('keithwesley@gmail.com', '$2a$12$gfVG16cGMcMNi2YnfgyZsOW2weKsXgjGmgeUGE50JWNch28CRRB9q', TRUE, '2022-10-21 19:06:25.454356', '2022-10-21 19:06:25.454356')[0m
+  [1m[36mTRANSACTION (89.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('nyalemwasaha@gmail.com', '$2a$12$ita919JlY9NUFxqkHnHv9OIOlXAgks9RNdDMcRjhSIKlNS6hBYGQC', FALSE, '2022-10-21 19:06:25.884361', '2022-10-21 19:06:25.884361')[0m
+  [1m[36mTRANSACTION (91.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('kibirafrancis@gmail.com', '$2a$12$HYx.yocy8lIMkWwgTTGQFOTxeJlOYoJuDKkSTmpq/hWyp7Gj7GIvW', FALSE, '2022-10-21 19:06:26.259894', '2022-10-21 19:06:26.259894')[0m
+  [1m[36mTRANSACTION (55.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.3ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (1, 'Kihahu Mutaga', 'https://robohash.org/voluptassedoccaecati.png?size=300x300&set=set1', '0727249154', 'Learn rules like a pro and break them like an artist', 'male', '2022-10-21 19:06:29.028448', '2022-10-21 19:06:29.028448')[0m
+  [1m[36mTRANSACTION (63.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.5ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (2, 'Jeska Jenipher', 'https://robohash.org/perferendiseavelit.png?size=300x300&set=set1', '07421480348', 'Bring your best shot', 'female', '2022-10-21 19:06:29.104246', '2022-10-21 19:06:29.104246')[0m
+  [1m[36mTRANSACTION (47.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.8ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (3, 'Keith Wesley', 'https://robohash.org/nonplaceatex.png?size=300x300&set=set1', '0726842187', 'I talk to the future', 'male', '2022-10-21 19:06:29.165981', '2022-10-21 19:06:29.165981')[0m
+  [1m[36mTRANSACTION (55.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.7ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (4, 'Nyale Mwasaha', 'https://robohash.org/animiadipisciconsequatur.png?size=300x300&set=set1', '0727979657', 'Take memories leave footprints', 'male', '2022-10-21 19:06:29.237715', '2022-10-21 19:06:29.237715')[0m
+  [1m[36mTRANSACTION (132.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.8ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (5, 'Francis Kibira', 'https://robohash.org/delenitietet.png?size=300x300&set=set1', '0700595184', 'Have fun when you still can have', 'male', '2022-10-21 19:06:29.386506', '2022-10-21 19:06:29.386506')[0m
+  [1m[36mTRANSACTION (55.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserProfile Load (0.4ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles`[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserProfile Load (0.4ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m

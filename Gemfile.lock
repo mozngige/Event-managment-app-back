@@ -83,6 +83,8 @@ GEM
       reline (>= 0.3.1)
     dotenv (2.8.1)
     erubi (1.11.0)
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     httparty (0.18.1)
@@ -123,6 +125,8 @@ GEM
       net-protocol
     nio4r (2.5.8)
     nokogiri (1.13.9-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     phony (2.20.1)
     phony_rails (0.15.0)
@@ -187,12 +191,14 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   active_model_serializers
   bcrypt
   debug
   dotenv
+  faker
   jwt
   mpesa_stk
   mysql2 (~> 0.5)
@@ -206,4 +212,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.22
+   2.3.20
