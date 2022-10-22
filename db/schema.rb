@@ -12,6 +12,8 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_10_21_182342) do
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.string "banner_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :event_categories
   resources :user_profiles
   resources :categories
   resources :users
