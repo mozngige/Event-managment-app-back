@@ -74,7 +74,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.string "email"
     t.string "password_digest"
     t.boolean "is_organiser"
-    t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
