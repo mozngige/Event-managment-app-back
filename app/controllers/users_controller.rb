@@ -1,22 +1,24 @@
 class UsersController < ApplicationController
-   
-
+rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
     #skip_before_action :authorize, only: [ :create,:show]
-
-    def create
-        user = User.create!(user_params)
-        session[:user_id] = user.id
-        render json: user, status: :created
+    def index
+        render json: User.all,status: :ok
     end
 
     def show
-        user = User.find(session[:user_id])
-        render json: user, status: :created
+        user = User.find(params[:id])
+        render json: user, status: :ok
     end
 
-    private
+    # def create
+    #     user = User.create!(user_params)
+    #     session[:user_id] = user.id
+    #     render json: user, status: :created
+    # end
 
-    def user_params
-        params.permit(:email,:username, :password, :is_organiser)
-    end
+    # private
+
+    # def user_params
+    #     params.permit(:email,:username, :password, :is_organiser)
+    # end
 end

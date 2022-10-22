@@ -9,15 +9,15 @@ puts "Seeding Database tables"
 
 puts "Seeding user data"
 
-user1 = User.create(email:"kihahumutagah@gmail.com",password:"codewarleets",is_organiser:false)
+user1 = User.create(email:"kihahumutagah@gmail.com",username:"mutaga",password:"codewarleets",is_organiser:false)
 
-user2 = User.create(email:"jeskajenipher@gmail.com",password:"jeskajj19",is_organiser:true)
+user2 = User.create(email:"jeskajenipher@gmail.com", username:"jeska",password:"jeskajj19",is_organiser:true)
 
-user3 = User.create(email:"keithwesley@gmail.com",password:"keithwestie13",is_organiser:false)
+user3 = User.create(email:"keithwesley@gmail.com",username:"keith",password:"keithwestie13",is_organiser:false)
 
-user4 = User.create(email:"nyalemwasaha@gmail.com",password:"mintnyale23",is_organiser:false)
+user4 = User.create(email:"nyalemwasaha@gmail.com",username:"elvis",password:"mintnyale23",is_organiser:false)
 
-user5 = User.create(email:"kibirafrancis@gmail.com",password:"francran",is_organiser:false)
+user5 = User.create(email:"kibirafrancis@gmail.com",username:"francis",password:"francran",is_organiser:false)
 
 
 puts "Seeding events category table"
@@ -63,7 +63,7 @@ event4 = Event.create(category_id:event_category2.id,title:"GooBad marketing",ev
 
 event5 = Event.create(category_id:event_category3.id,title:"Call of Duty",event_date:"2022-12-12 08:00:00",early_booking_end_date:"2022-12-01 08:00:00",early_booking_price_regular:1000,early_booking_price_vip:1000,location:"Westgate Mall Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:500,regular_no_of_tickets:500,banner_img:"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg",description:"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served",image_url1:"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg",image_url2:"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=")
 
-event6 = Event.create(category_id:event_category3.id,title:"CheckChess",event_date:"2022-12-20 08:00:00",early_booking_end_date:"2022-12-10 08:00:00",early_booking_price_regular:2000,early_booking_price_vip:2000,location:"Desert Rose Nairobi",regular_price:"",vip_price:2000,vip_no_of_tickets:2500,regular_no_of_tickets:2500,banner_img:"https://thumbs.dreamstime.com/b/chessboard-chess-pieces-gray-background-banner-212681982.jpg",description:"Battle for it. Winner gets a 300,000 reward.Come with own Food and drink",image_url1:"https://media.istockphoto.com/photos/businessman-suit-with-chess-board-game-plan-stratgy-and-tactic-picture-id1256422923?b=1&k=20&m=1256422923&s=170667a&w=0&h=t039Cn8gv2CC2IpPkhbFxgTopvc6Le6t6hbWsCRDsyc=",image_url2:"https://thumbs.dreamstime.com/b/closeup-king-chess-piece-defeated-enemy-trade-competitor-checkmate-end-chessboard-game-businessman-moving-to-success-158990889.jpg")
+event6 = Event.create(category_id:event_category3.id,title:"CheckChess",event_date:"2022-12-20 08:00:00",early_booking_end_date:"2022-12-10 08:00:00",early_booking_price_regular:2000,early_booking_price_vip:2000,location:"Desert Rose Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:2500,regular_no_of_tickets:2500,banner_img:"https://thumbs.dreamstime.com/b/chessboard-chess-pieces-gray-background-banner-212681982.jpg",description:"Battle for it. Winner gets a 300,000 reward.Come with own Food and drink",image_url1:"https://media.istockphoto.com/photos/businessman-suit-with-chess-board-game-plan-stratgy-and-tactic-picture-id1256422923?b=1&k=20&m=1256422923&s=170667a&w=0&h=t039Cn8gv2CC2IpPkhbFxgTopvc6Le6t6hbWsCRDsyc=",image_url2:"https://thumbs.dreamstime.com/b/closeup-king-chess-piece-defeated-enemy-trade-competitor-checkmate-end-chessboard-game-businessman-moving-to-success-158990889.jpg")
 
 
 puts "Seeding the user_events table"
