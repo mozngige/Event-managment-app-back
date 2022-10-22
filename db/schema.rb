@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_22_050648) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
+  create_table "abouts", charset: "utf8mb4", force: :cascade do |t|
+    t.string "about_img"
+    t.string "about_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.string "banner_img"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "communities", charset: "utf8mb4", force: :cascade do |t|
+    t.string "community_description"
+    t.string "community_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
