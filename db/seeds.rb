@@ -9,15 +9,15 @@ puts "Seeding Database tables"
 
 puts "Seeding user data"
 
-user1 = User.create(email:"kihahumutagah@gmail.com",password:"codewarleets",is_organiser:false)
+user1 = User.create(email:"kihahumutagah@gmail.com",username:"mutaga",password:"codewarleets",is_organiser:false)
 
-user2 = User.create(email:"jeskajenipher@gmail.com",password:"jeskajj19",is_organiser:true)
+user2 = User.create(email:"jeskajenipher@gmail.com", username:"jeska",password:"jeskajj19",is_organiser:true)
 
-user3 = User.create(email:"keithwesley@gmail.com",password:"keithwestie13",is_organiser:false)
+user3 = User.create(email:"keithwesley@gmail.com",username:"keith",password:"keithwestie13",is_organiser:false)
 
-user4 = User.create(email:"nyalemwasaha@gmail.com",password:"mintnyale23",is_organiser:false)
+user4 = User.create(email:"nyalemwasaha@gmail.com",username:"elvis",password:"mintnyale23",is_organiser:false)
 
-user5 = User.create(email:"kibirafrancis@gmail.com",password:"francran",is_organiser:false)
+user5 = User.create(email:"kibirafrancis@gmail.com",username:"francis",password:"francran",is_organiser:false)
 
 
 puts "Seeding events category table"
