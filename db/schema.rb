@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_21_182342) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_22_030747) do
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.string "banner_img"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", charset: "utf8mb4", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "user_id"
+    t.string "title"
+    t.datetime "event_date"
+    t.datetime "earlybooking_enddate"
+    t.integer "earlybooking_price_regular"
+    t.integer "early_boking_price_vip"
+    t.string "location"
+    t.integer "regular_price"
+    t.integer "vip_price"
+    t.integer "vip_no_of_tickets"
+    t.integer "regular_no_of_tickets"
+    t.string "banner"
+    t.string "description"
+    t.string "image_url1"
+    t.string "image_url2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

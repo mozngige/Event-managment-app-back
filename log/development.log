@@ -419,3 +419,13 @@ Migrating to CreateUserProfiles (20221021182342)
   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
   [1m[36mUserProfile Create (0.8ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (5, 'Francis Kibira', 'https://robohash.org/utrepellatmaiores.png?size=300x300&set=set1', '0700595184', 'Have fun when you still can have', 'male', '2022-10-22 02:44:49.981939', '2022-10-22 02:44:49.981939')[0m
   [1m[36mTRANSACTION (82.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateEvents (20221022030747)
+  [1m[35m (628.2ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_id` int, `user_id` int, `title` varchar(255), `event_date` datetime(6), `earlybooking_enddate` datetime(6), `earlybooking_price_regular` int, `early_boking_price_vip` int, `location` varchar(255), `regular_price` int, `vip_price` int, `vip_no_of_tickets` int, `regular_no_of_tickets` int, `banner` varchar(255), `description` varchar(255), `image_url1` varchar(255), `image_url2` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022030747')[0m
+  [1m[36mTRANSACTION (48.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
