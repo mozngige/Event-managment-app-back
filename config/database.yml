@@ -21,7 +21,6 @@ default: &default
   username: tasha
   host: 127.0.0.1
   socket: /tmp/mysql.sock
-  password: tashexc2754
 development:
   <<: *default
   database: ticketing_rails
