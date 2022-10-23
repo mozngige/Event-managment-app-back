@@ -13,12 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  username: jeska
+  password: jeska 
+  socket: /tmp/mysql.sock 
 
 development:
   <<: *default
+  host: 127.0.0.1
   database: ticketing_rails
 
 production:
