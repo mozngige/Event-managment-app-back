@@ -1,7 +1,5 @@
 class UserProfilesController < ApplicationController
-
-
-
+    before_action :authorize
 
     def create
         user_profile= UserProfile.create!(user_profile_params)
@@ -17,10 +15,11 @@ class UserProfilesController < ApplicationController
         user_profile = find_profile
         user_profile.update(user_params)
         render json: user_profile
+    end
 
     private
     def find_profile
-        UserProfile.find(params[:user_id])
+        UserProfile.find(params[:id])
     end
 
     def user_profile_params
