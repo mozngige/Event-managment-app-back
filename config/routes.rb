@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   resources :users, only: [:index, :create, :show]
-  resources :categories, only: [:index]
-  
+  resources :communities
+  resources :abouts
+  resources :user_events
+  resources :events
+  resources :event_categories
+  resources :user_profiles
+  resources :categories
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -17,6 +17,10 @@ default: &default
   password: jeska 
   socket: /tmp/mysql.sock 
 
+  # Mutaga's credentials
+  username: tasha
+  host: 127.0.0.1
+  socket: /tmp/mysql.sock
 development:
   <<: *default
   host: 127.0.0.1 
