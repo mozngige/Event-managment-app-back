@@ -6985,3 +6985,930 @@ Migrating to CreateCommunities (20221022095313)
   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 6 LIMIT 1[0m
   [1m[36mUserEvent Create (0.7ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (2, 6, '2022-10-22 17:23:06.408076', '2022-10-22 17:23:06.408076')[0m
   [1m[36mTRANSACTION (55.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCategories (20221020091547)
+  [1m[35m (258.6ms)[0m  [1m[35mDROP TABLE `categories`[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (57.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20221020091547'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20221020085515)
+  [1m[35m (501.9ms)[0m  [1m[35mDROP TABLE `users`[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (66.8ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20221020085515'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20221020085515)
+  [1m[35m (689.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `username` varchar(255), `password_digest` varchar(255), `is_organiser` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221020085515')[0m
+  [1m[36mTRANSACTION (44.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20221020091547)
+  [1m[35m (501.3ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `banner_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221020091547')[0m
+  [1m[36mTRANSACTION (99.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserProfiles (20221021182342)
+  [1m[35m (511.1ms)[0m  [1m[35mCREATE TABLE `user_profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `full_name` varchar(255), `avatar_img` varchar(255), `phone_number` varchar(255), `bio` text, `gender` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221021182342')[0m
+  [1m[36mTRANSACTION (58.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20221022030747)
+  [1m[35m (360.6ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_id` int, `title` varchar(255), `event_date` datetime(6), `early_booking_end_date` datetime(6), `early_booking_price_regular` int, `early_booking_price_vip` int, `location` varchar(255), `regular_price` int, `vip_price` int, `vip_no_of_tickets` int, `regular_no_of_tickets` int, `banner_img` varchar(255), `description` varchar(255), `image_url1` varchar(255), `image_url2` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022030747')[0m
+  [1m[36mTRANSACTION (78.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserEvents (20221022050648)
+  [1m[35m (421.6ms)[0m  [1m[35mCREATE TABLE `user_events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `event_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022050648')[0m
+  [1m[36mTRANSACTION (50.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAbouts (20221022094804)
+  [1m[35m (368.7ms)[0m  [1m[35mCREATE TABLE `abouts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `about_img` varchar(255), `about_description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022094804')[0m
+  [1m[36mTRANSACTION (69.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCommunities (20221022095313)
+  [1m[35m (368.4ms)[0m  [1m[35mCREATE TABLE `communities` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `community_description` varchar(255), `community_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022095313')[0m
+  [1m[36mTRANSACTION (75.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('kihahumutagah@gmail.com', 'mutaga', '$2a$12$I/wNt1poz1DuXtr6zNaZbuu7RhH8DpGCqYsJmac2X1hyuxF/e3G4e', FALSE, '2022-10-23 07:21:32.933889', '2022-10-23 07:21:32.933889')[0m
+  [1m[36mTRANSACTION (51.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('jeskajenipher@gmail.com', 'jeska', '$2a$12$UDtFAK0VjL.IfITE27W.L.LnUADZa.I1FaI/4NhSPun1cFaraHcuu', TRUE, '2022-10-23 07:21:33.261501', '2022-10-23 07:21:33.261501')[0m
+  [1m[36mTRANSACTION (75.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('keithwesley@gmail.com', 'keith', '$2a$12$Nxf1JkgJ8k4Dyq1GKWDTG.IkcRJww5hHj25MPpNvF7S3VJ2Spl.aq', FALSE, '2022-10-23 07:21:33.616569', '2022-10-23 07:21:33.616569')[0m
+  [1m[36mTRANSACTION (66.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('nyalemwasaha@gmail.com', 'elvis', '$2a$12$QjA32whmV75Lnxk4B5SPc.tMxaJhQkQEPMpRw1/THS7vV3amQFiCG', FALSE, '2022-10-23 07:21:33.965658', '2022-10-23 07:21:33.965658')[0m
+  [1m[36mTRANSACTION (67.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('kibirafrancis@gmail.com', 'francis', '$2a$12$OeneHErVP9TGYHwxfJEAG.Q.XAkTSzGDEv//q3NNCUxvJtiFViwae', FALSE, '2022-10-23 07:21:34.304918', '2022-10-23 07:21:34.304918')[0m
+  [1m[36mTRANSACTION (58.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Music', 'https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800', '2022-10-23 07:21:34.388993', '2022-10-23 07:21:34.388993')[0m
+  [1m[36mTRANSACTION (56.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Business', 'https://img.freepik.com/premium-psd/business-promotion-corporate-web-banner-template_120329-748.jpg?w=1380', '2022-10-23 07:21:34.451798', '2022-10-23 07:21:34.451798')[0m
+  [1m[36mTRANSACTION (66.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Games', 'https://img.freepik.com/free-psd/flat-design-video-games-template_23-2149287300.jpg?w=1380&t=st=1666405384~exp=1666405984~hmac=ca774ed95e1223ffa38e863cab0bb5b5f749c0c9d7df009e08b36e9f24712909', '2022-10-23 07:21:34.525677', '2022-10-23 07:21:34.525677')[0m
+  [1m[36mTRANSACTION (47.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Hobbies', 'https://img.freepik.com/free-vector/set-young-people-with-various-professions_74855-3784.jpg?w=1380&t=st=1666405791~exp=1666406391~hmac=8911666a4b638cebb82a60a50ec0fe4312f0d1d0a3f2b85025f49c342da7e3df', '2022-10-23 07:21:34.576823', '2022-10-23 07:21:34.576823')[0m
+  [1m[36mTRANSACTION (65.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Food & Drink', 'https://img.freepik.com/free-vector/bio-healthy-food-banner_23-2148852378.jpg?w=1380&t=st=1666405704~exp=1666406304~hmac=d9bb76f60ceb6814c634f432f01e8a4ef216f9d34038a15c0e57cd4c0a7286cf', '2022-10-23 07:21:34.646530', '2022-10-23 07:21:34.646530')[0m
+  [1m[36mTRANSACTION (47.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Performing Arts', 'https://png.pngtree.com/background/20210709/original/pngtree-passion-concert-background-picture-image_480410.jpg', '2022-10-23 07:21:34.699681', '2022-10-23 07:21:34.699681')[0m
+  [1m[36mTRANSACTION (47.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Sciences', 'https://png.pngtree.com/background/20211215/original/pngtree-real-shot-laboratory-do-experiment-test-tube-plus-pharmacy-science-biochemistry-picture-image_1475609.jpg', '2022-10-23 07:21:34.753154', '2022-10-23 07:21:34.753154')[0m
+  [1m[36mTRANSACTION (102.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Sport & Fitness', 'https://img.freepik.com/free-psd/sport-tech-social-media-post-template_23-2148523619.jpg?w=1380&t=st=1666406214~exp=1666406814~hmac=d4dcedec12b55d94f4828c85f98e6d3a7a86022db951fc0532c1009e942d7c04', '2022-10-23 07:21:34.868969', '2022-10-23 07:21:34.868969')[0m
+  [1m[36mTRANSACTION (77.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.5ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (1, 'Kihahu Mutaga', 'https://robohash.org/doloremsintvoluptates.png?size=300x300&set=set1', '0727249154', 'Learn rules like a pro and break them like an artist', 'male', '2022-10-23 07:21:36.592125', '2022-10-23 07:21:36.592125')[0m
+  [1m[36mTRANSACTION (64.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.6ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (2, 'Jeska Jenipher', 'https://robohash.org/perspiciatisvoluptasdelectus.png?size=300x300&set=set1', '07421480348', 'Bring your best shot', 'female', '2022-10-23 07:21:36.664774', '2022-10-23 07:21:36.664774')[0m
+  [1m[36mTRANSACTION (81.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.5ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (3, 'Keith Wesley', 'https://robohash.org/eaquevelitomnis.png?size=300x300&set=set1', '0726842187', 'I talk to the future', 'male', '2022-10-23 07:21:36.753366', '2022-10-23 07:21:36.753366')[0m
+  [1m[36mTRANSACTION (65.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.6ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (4, 'Nyale Mwasaha', 'https://robohash.org/nesciuntquaefugiat.png?size=300x300&set=set1', '0727979657', 'Take memories leave footprints', 'male', '2022-10-23 07:21:36.828119', '2022-10-23 07:21:36.828119')[0m
+  [1m[36mTRANSACTION (61.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUserProfile Create (0.5ms)[0m  [1m[32mINSERT INTO `user_profiles` (`user_id`, `full_name`, `avatar_img`, `phone_number`, `bio`, `gender`, `created_at`, `updated_at`) VALUES (5, 'Francis Kibira', 'https://robohash.org/estquiqui.png?size=300x300&set=set1', '0700595184', 'Have fun when you still can have', 'male', '2022-10-23 07:21:36.901725', '2022-10-23 07:21:36.901725')[0m
+  [1m[36mTRANSACTION (67.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mEvent Create (2.7ms)[0m  [1m[32mINSERT INTO `events` (`category_id`, `title`, `event_date`, `early_booking_end_date`, `early_booking_price_regular`, `early_booking_price_vip`, `location`, `regular_price`, `vip_price`, `vip_no_of_tickets`, `regular_no_of_tickets`, `banner_img`, `description`, `image_url1`, `image_url2`, `created_at`, `updated_at`) VALUES (1, 'Afrika Concert', '2022-12-12 10:00:00', '2022-11-19 00:00:00', 1200, 2000, 'afraha stadium Nakuru', 1500, 2300, 1000, 4000, 'https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000', 'Enjoy our african diverse culture.', 'https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg', 'https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg', '2022-10-23 07:21:37.035860', '2022-10-23 07:21:37.035860')[0m
+  [1m[36mTRANSACTION (67.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO `events` (`category_id`, `title`, `event_date`, `early_booking_end_date`, `early_booking_price_regular`, `early_booking_price_vip`, `location`, `regular_price`, `vip_price`, `vip_no_of_tickets`, `regular_no_of_tickets`, `banner_img`, `description`, `image_url1`, `image_url2`, `created_at`, `updated_at`) VALUES (1, 'Afro Concert', '2022-12-01 20:00:00', '2022-11-19 20:00:00', 3000, 5000, 'Nyali mall Mombasa', 5000, 7500, 1000, 12000, 'https://image.shutterstock.com/shutterstock/photos/365709908/display_1500/stock-photo-amsterdam-the-netherlands-february-concert-of-african-band-from-mali-bko-quintet-at-365709908.jpg', 'An event bringing together top artists across Africa to meet fans', 'https://www.bellanaija.com/wp-content/uploads/2022/07/279673647_1338241670017685_7307805693980761003_n-e1657274874156.jpg', 'https://i.pinimg.com/originals/1c/a1/14/1ca114b0953f2b9bf33736b98f4ea700.jpg', '2022-10-23 07:21:37.125167', '2022-10-23 07:21:37.125167')[0m
+  [1m[36mTRANSACTION (57.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO `events` (`category_id`, `title`, `event_date`, `early_booking_end_date`, `early_booking_price_regular`, `early_booking_price_vip`, `location`, `regular_price`, `vip_price`, `vip_no_of_tickets`, `regular_no_of_tickets`, `banner_img`, `description`, `image_url1`, `image_url2`, `created_at`, `updated_at`) VALUES (2, 'BusyFinance', '2022-10-10 08:00:00', '2022-10-03 00:00:00', 1200, 1200, 'Gateway mall Syokimau', 1200, 1200, 1000, 1000, 'https://www.varsboffin.com/images/business-finance-banner.jpg', 'Where solutions to your financial problems are sort. how best to manage finance', 'https://www.dmu.ac.uk/webimages/study-images/courses/business-and-law/postgraduate/international-business-and-finance-img-02.jpg', 'https://media.istockphoto.com/photos/technical-financial-graph-on-technology-abstract-background-picture-id639666654?k=20&m=639666654&s=612x612&w=0&h=1xl981xcYy5J4LFQHaWRV50cDp8V1sbERtmfokDqMTw=', '2022-10-23 07:21:37.191649', '2022-10-23 07:21:37.191649')[0m
+  [1m[36mTRANSACTION (60.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO `events` (`category_id`, `title`, `event_date`, `early_booking_end_date`, `early_booking_price_regular`, `early_booking_price_vip`, `location`, `regular_price`, `vip_price`, `vip_no_of_tickets`, `regular_no_of_tickets`, `banner_img`, `description`, `image_url1`, `image_url2`, `created_at`, `updated_at`) VALUES (2, 'GooBad marketing', '2022-10-20 08:00:00', '2022-10-10 08:00:00', 1000, 1000, 'Junction Mall Nairobi', 1000, 1000, 1000, 1000, 'https://thumbs.dreamstime.com/z/inscription-digital-marketing-website-header-banner-background-inscription-digital-marketing-website-header-banner-199406940.jpg', 'Seeking to educate the public on how to best market their products when seeking customers', 'https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg?w=2000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE5w0Xbm2AiDITkBWCgbXaoc9QhkkEwKaC2ZGldLJsoQ&s', '2022-10-23 07:21:37.260043', '2022-10-23 07:21:37.260043')[0m
+  [1m[36mTRANSACTION (63.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO `events` (`category_id`, `title`, `event_date`, `early_booking_end_date`, `early_booking_price_regular`, `early_booking_price_vip`, `location`, `regular_price`, `vip_price`, `vip_no_of_tickets`, `regular_no_of_tickets`, `banner_img`, `description`, `image_url1`, `image_url2`, `created_at`, `updated_at`) VALUES (3, 'Call of Duty', '2022-12-12 08:00:00', '2022-12-01 08:00:00', 1000, 1000, 'Westgate Mall Nairobi', 2000, 2000, 500, 500, 'https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg', 'Gamers meetup to have their best experiences while gaming.Foods and drinks will be served', 'https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg', 'https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=', '2022-10-23 07:21:37.331502', '2022-10-23 07:21:37.331502')[0m
+  [1m[36mTRANSACTION (47.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO `events` (`category_id`, `title`, `event_date`, `early_booking_end_date`, `early_booking_price_regular`, `early_booking_price_vip`, `location`, `regular_price`, `vip_price`, `vip_no_of_tickets`, `regular_no_of_tickets`, `banner_img`, `description`, `image_url1`, `image_url2`, `created_at`, `updated_at`) VALUES (3, 'CheckChess', '2022-12-20 08:00:00', '2022-12-10 08:00:00', 2000, 2000, 'Desert Rose Nairobi', 2000, 2000, 2500, 2500, 'https://thumbs.dreamstime.com/b/chessboard-chess-pieces-gray-background-banner-212681982.jpg', 'Battle for it. Winner gets a 300,000 reward.Come with own Food and drink', 'https://media.istockphoto.com/photos/businessman-suit-with-chess-board-game-plan-stratgy-and-tactic-picture-id1256422923?b=1&k=20&m=1256422923&s=170667a&w=0&h=t039Cn8gv2CC2IpPkhbFxgTopvc6Le6t6hbWsCRDsyc=', 'https://thumbs.dreamstime.com/b/closeup-king-chess-piece-defeated-enemy-trade-competitor-checkmate-end-chessboard-game-businessman-moving-to-success-158990889.jpg', '2022-10-23 07:21:37.385709', '2022-10-23 07:21:37.385709')[0m
+  [1m[36mTRANSACTION (63.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.8ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (1, 1, '2022-10-23 07:21:37.492170', '2022-10-23 07:21:37.492170')[0m
+  [1m[36mTRANSACTION (49.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.6ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (1, 2, '2022-10-23 07:21:37.556285', '2022-10-23 07:21:37.556285')[0m
+  [1m[36mTRANSACTION (63.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.6ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (1, 3, '2022-10-23 07:21:37.632980', '2022-10-23 07:21:37.632980')[0m
+  [1m[36mTRANSACTION (57.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserEvent Create (2.9ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (3, 1, '2022-10-23 07:21:37.703261', '2022-10-23 07:21:37.703261')[0m
+  [1m[36mTRANSACTION (60.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.6ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (3, 3, '2022-10-23 07:21:37.779821', '2022-10-23 07:21:37.779821')[0m
+  [1m[36mTRANSACTION (60.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 5 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.4ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (3, 5, '2022-10-23 07:21:37.852888', '2022-10-23 07:21:37.852888')[0m
+  [1m[36mTRANSACTION (80.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.7ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (4, 2, '2022-10-23 07:21:37.944360', '2022-10-23 07:21:37.944360')[0m
+  [1m[36mTRANSACTION (69.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 4 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.7ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (4, 4, '2022-10-23 07:21:38.032413', '2022-10-23 07:21:38.032413')[0m
+  [1m[36mTRANSACTION (51.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 6 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.7ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (4, 6, '2022-10-23 07:21:38.108970', '2022-10-23 07:21:38.108970')[0m
+  [1m[36mTRANSACTION (50.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.5ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (2, 1, '2022-10-23 07:21:38.178407', '2022-10-23 07:21:38.178407')[0m
+  [1m[36mTRANSACTION (52.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Load (4.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.5ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (2, 2, '2022-10-23 07:21:38.254880', '2022-10-23 07:21:38.254880')[0m
+  [1m[36mTRANSACTION (52.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.5ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (2, 3, '2022-10-23 07:21:38.324283', '2022-10-23 07:21:38.324283')[0m
+  [1m[36mTRANSACTION (54.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 4 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.9ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (2, 4, '2022-10-23 07:21:38.392381', '2022-10-23 07:21:38.392381')[0m
+  [1m[36mTRANSACTION (51.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 5 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.4ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (2, 5, '2022-10-23 07:21:38.460672', '2022-10-23 07:21:38.460672')[0m
+  [1m[36mTRANSACTION (59.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 6 LIMIT 1[0m
+  [1m[36mUserEvent Create (0.6ms)[0m  [1m[32mINSERT INTO `user_events` (`user_id`, `event_id`, `created_at`, `updated_at`) VALUES (2, 6, '2022-10-23 07:21:38.529869', '2022-10-23 07:21:38.529869')[0m
+  [1m[36mTRANSACTION (64.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-10-23 10:41:04 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-10-23 10:41:05 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-10-23 10:41:25 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-10-23 10:41:25 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-10-23 10:41:28 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-10-23 10:41:28 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-10-23 10:41:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.8ms | Allocations: 604)
+Completed 200 OK in 19ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3255)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 10:42:36 +0300
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "welcome"=>{"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 350)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1099)
+
+
+Started GET "/usera" for 127.0.0.1 at 2022-10-23 10:42:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/usera"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-10-23 10:42:46 +0300
+Processing by UsersController#index as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"kush"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.3ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.4ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 4 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (3.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (2.8ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 5 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (273.52ms)
+Completed 200 OK in 368ms (Views: 325.1ms | ActiveRecord: 46.9ms | Allocations: 88195)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-10-23 10:43:11 +0300
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"3", "user"=>{"username"=>"kush"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:9:in `show'
+[active_model_serializers]   [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.1ms)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 3.4ms | Allocations: 3764)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-23 10:43:22 +0300
+Processing by EventsController#index as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "event"=>{}}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.74ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.6ms | Allocations: 2304)
+
+
+Started GET "/abouts" for 127.0.0.1 at 2022-10-23 10:44:47 +0300
+Processing by AboutsController#index as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "about"=>{}}
+  [1m[36mAbout Load (0.8ms)[0m  [1m[34mSELECT `abouts`.* FROM `abouts`[0m
+  ↳ app/controllers/abouts_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 2.7ms | Allocations: 799)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-10-23 10:52:39 +0300
+Processing by CategoriesController#index as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category"=>{}}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.33ms)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 8.1ms | Allocations: 2996)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2022-10-23 10:52:43 +0300
+Processing by CategoriesController#show as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"2", "category"=>{}}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:8:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:9:in `show'
+[active_model_serializers] Rendered CategoryEventsSerializer with ActiveModelSerializers::Adapter::Attributes (31.43ms)
+Completed 200 OK in 39ms (Views: 31.7ms | ActiveRecord: 1.4ms | Allocations: 9467)
+
+
+Started GET "/communities" for 127.0.0.1 at 2022-10-23 10:53:49 +0300
+Processing by CommunitiesController#index as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "community"=>{}}
+  [1m[36mCommunity Load (0.8ms)[0m  [1m[34mSELECT `communities`.* FROM `communities`[0m
+  ↳ app/controllers/communities_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 2.4ms | Allocations: 799)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-23 10:57:22 +0300
+Processing by EventsController#index as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "event"=>{}}
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 6.0ms | Allocations: 6036)
+
+
+Started GET "/userprofiles" for 127.0.0.1 at 2022-10-23 10:59:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/userprofiles"):
+  
+Started GET "/user_profiles" for 127.0.0.1 at 2022-10-23 10:59:23 +0300
+  
+SyntaxError (/home/moringa/Development/code/phase-4/Event-managment-app-back/app/controllers/user_profiles_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/user_profiles_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/user_profiles_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/user_profiles/1" for 127.0.0.1 at 2022-10-23 11:00:11 +0300
+  
+SyntaxError (/home/moringa/Development/code/phase-4/Event-managment-app-back/app/controllers/user_profiles_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/user_profiles_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/user_profiles_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/user_profiles/1" for 127.0.0.1 at 2022-10-23 11:00:46 +0300
+Processing by UserProfilesController#show as */*
+  Parameters: {"username"=>"kush", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"1", "user_profile"=>{}}
+Completed 404 Not Found in 2ms (ActiveRecord: 4.0ms | Allocations: 235)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find UserProfile without an ID):
+  
+app/controllers/user_profiles_controller.rb:21:in `find_profile'
+app/controllers/user_profiles_controller.rb:10:in `show'
+Started POST "/login" for 127.0.0.1 at 2022-10-23 11:05:56 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "session"=>{"username"=>"jeska", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'jeska' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 6.5ms | Allocations: 7241)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SessionsController:0x00000000029798>):
+  
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-10-23 11:06:15 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "session"=>{"username"=>"jeska", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'jeska' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 9.0ms | Allocations: 6164)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-10-23 11:12:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "session"=>{"username"=>"jeska", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'jeska' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:9:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (152.02ms)
+Completed 201 Created in 567ms (Views: 158.3ms | ActiveRecord: 15.8ms | Allocations: 95997)
+
+
+Started GET "/user_profiles/2" for 127.0.0.1 at 2022-10-23 11:13:27 +0300
+Processing by UserProfilesController#show as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "id"=>"2", "user_profile"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1845)
+
+
+  
+NoMethodError (undefined method `authorize' for #<UserProfilesController:0x0000000001dd80>):
+  
+activesupport (7.0.4) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_profiles/2" for 127.0.0.1 at 2022-10-23 11:16:52 +0300
+Processing by UserProfilesController#show as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "id"=>"2", "user_profile"=>{}}
+Completed 404 Not Found in 6ms (ActiveRecord: 7.0ms | Allocations: 261)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find UserProfile without an ID):
+  
+app/controllers/user_profiles_controller.rb:22:in `find_profile'
+app/controllers/user_profiles_controller.rb:11:in `show'
+Started GET "/user_profiles/2" for 127.0.0.1 at 2022-10-23 11:18:28 +0300
+Processing by UserProfilesController#show as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "id"=>"2", "user_profile"=>{}}
+  [1m[36mUserProfile Load (1.9ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/user_profiles_controller.rb:22:in `find_profile'
+[active_model_serializers] Rendered UserProfileSerializer with ActiveModelSerializers::Adapter::Attributes (1.02ms)
+Completed 201 Created in 29ms (Views: 5.6ms | ActiveRecord: 17.9ms | Allocations: 2999)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-23 11:18:50 +0300
+Processing by SessionsController#destroy as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "session"=>{"username"=>"jeska", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 46)
+
+
+Started GET "/user_profiles/2" for 127.0.0.1 at 2022-10-23 11:19:03 +0300
+Processing by UserProfilesController#show as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "id"=>"2", "user_profile"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 215ms (Views: 214.5ms | ActiveRecord: 0.0ms | Allocations: 510)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-23 11:19:21 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "session"=>{"username"=>"jeska", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'jeska' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:9:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (73.09ms)
+Completed 201 Created in 403ms (Views: 66.2ms | ActiveRecord: 18.3ms | Allocations: 19949)
+
+
+Started GET "/user_profiles/2" for 127.0.0.1 at 2022-10-23 11:19:38 +0300
+Processing by UserProfilesController#show as */*
+  Parameters: {"username"=>"jeska", "password"=>"[FILTERED]", "id"=>"2", "user_profile"=>{}}
+  [1m[36mUserProfile Load (1.1ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/user_profiles_controller.rb:22:in `find_profile'
+[active_model_serializers] Rendered UserProfileSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 201 Created in 7ms (Views: 2.4ms | ActiveRecord: 1.1ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-23 11:20:20 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"papa", "password"=>"[FILTERED]", "session"=>{"username"=>"papa", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'papa' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 10ms (Views: 0.8ms | ActiveRecord: 1.6ms | Allocations: 631)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-23 11:28:25 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"papa@test.com", "username"=>"papa", "password"=>"[FILTERED]", "is_organiser"=>false, "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"papa@test.com", "username"=>"papa", "is_organiser"=>false}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff97c4e4cb0>, params: {"email"=>"papa@test.com", "username"=>"papa", "password"=>"[FILTERED]", "is_organiser"=>false, "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"email"=>"papa@test.com", "username"=>"papa", "is_organiser"=>false}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('papa@test.com', 'papa', '$2a$12$Ctkv/zJbTlXCbMX35eXwgu4gAJ/BdP47ZENgEMcMO77DKh7x5nn0.', FALSE, '2022-10-23 08:28:25.526580', '2022-10-23 08:28:25.526580')[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (335.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 6 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers]   [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (63.48ms)
+Completed 201 Created in 707ms (Views: 63.6ms | ActiveRecord: 339.5ms | Allocations: 13423)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-23 11:29:19 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"papa", "password"=>"[FILTERED]", "session"=>{"username"=>"papa", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'papa' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 6 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `user_events` ON `events`.`id` = `user_events`.`event_id` WHERE `user_events`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:9:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.03ms)
+Completed 201 Created in 300ms (Views: 7.6ms | ActiveRecord: 1.9ms | Allocations: 2958)
+
+
