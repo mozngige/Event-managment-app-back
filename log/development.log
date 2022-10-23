@@ -37,3 +37,13 @@ Migrating to CreateCategories (20221020091547)
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `created_at`, `updated_at`) VALUES ('jenny@gmail.com', '$2a$12$Zl/PuV9LgpoBbj7DayxHTeG18SnGHvcBt4qrkCFBQn.x5tU7ZahPC', '2022-10-21 16:13:18.363319', '2022-10-21 16:13:18.363319')[0m
   [1m[36mTRANSACTION (45.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (4.8ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password_digest`, `created_at`, `updated_at`) VALUES ('jenny@gmail.com', '$2a$12$ukSLa0KQ2peuKhIB7ck2O.qDqU64wVqUWP/nLm7lfQH1YfDy1O6J.', '2022-10-23 06:05:45.216178', '2022-10-23 06:05:45.216178')[0m
+  [1m[36mTRANSACTION (70.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
