@@ -18,6 +18,8 @@ gem "active_model_serializers"
 
 gem "jwt"
 
+gem "byebug" 
+
 gem 'mpesa_stk'
 
 gem 'dotenv'
