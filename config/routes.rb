@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
-  resources :communities
+  resources :users, only: [:index, :create, :show]
+  resources :communities, only: [:index, :create, :show]
   resources :abouts
   resources :user_events
-  resources :events
+  resources :events, only: [:create, :index, :show]
   resources :event_categories
   resources :user_profiles
-  resources :categories
-  resources :users
+  resources :categories, only: [:index, :show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # The below routes shall create a user session, authenticating them and log them out on requirement
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 end
