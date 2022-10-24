@@ -8272,3 +8272,373 @@ Processing by EventsController#create as */*
 Completed 422 Unprocessable Entity in 13ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 8184)
 
 
+Started POST "/events/30" for ::1 at 2022-10-24 08:40:09 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/events/30"):
+  
+Started GET "/events/30" for ::1 at 2022-10-24 08:40:44 +0300
+  
+SyntaxError (/home/scott/Development/Code/phase-5/Event-managment-app-back/app/controllers/events_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/events_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/events_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/events/30" for ::1 at 2022-10-24 08:41:07 +0300
+Processing by EventsController#show as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"30", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:20:in `find_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 1.2ms | Allocations: 761)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=30):
+  
+app/controllers/events_controller.rb:20:in `find_event'
+app/controllers/events_controller.rb:7:in `show'
+Started GET "/events/30" for ::1 at 2022-10-24 08:42:48 +0300
+  
+SyntaxError (/home/scott/Development/Code/phase-5/Event-managment-app-back/app/controllers/events_controller.rb:29: syntax error, unexpected '}', expecting =>
+...nder json: {"record not found"}
+...                              ^
+):
+  
+app/controllers/events_controller.rb:29: syntax error, unexpected '}', expecting =>
+app/controllers/events_controller.rb:29: syntax error, unexpected '}', expecting =>
+Started GET "/events/30" for ::1 at 2022-10-24 08:43:15 +0300
+Processing by EventsController#show as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"30", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:21:in `find_event'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 930)
+
+
+Started GET "/events/30" for ::1 at 2022-10-24 08:43:26 +0300
+Processing by EventsController#show as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"30", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:21:in `find_event'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 1.3ms | Allocations: 930)
+
+
+Started GET "/events/30" for ::1 at 2022-10-24 08:45:28 +0300
+Processing by EventsController#show as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"30", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:21:in `find_event'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 404 Not Found in 4ms (Views: 0.6ms | ActiveRecord: 2.0ms | Allocations: 930)
+
+
+Started GET "/events/1" for ::1 at 2022-10-24 08:51:01 +0300
+Processing by EventsController#show as */*
+  Parameters: {"category_id"=>2, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"1", "event"=>{"category_id"=>2, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:26:in `find_event'
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:10:in `show'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (8.56ms)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 2.4ms | Allocations: 8695)
+
+
+Started PUT "/events/1" for ::1 at 2022-10-24 08:52:00 +0300
+  
+ActionController::RoutingError (No route matches [PUT] "/events/1"):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+    "category_id": 1,
+    "title": "Afrika Concert",
+    "event_date": "2022-12-12T10:00:00.000Z",
+    "early_booking_end_date": "2022-11-19T00:00:00.000Z",
+    "early_booking_price_regular": 1200,
+    "early_booking_price_vip": 2000,
+    "location": "afraha stadium Nakuru",
+    "regular_price": 1600,
+    "vip_price": 2400,
+    "vip_no_of_tickets": 1000,
+    "regular_no_of_tickets": 4000,
+    "banner_img": "https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",
+    "description": "Enjoy our african diverse culture.",
+    "image_url1": "https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",
+    "image_url2": "https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg",
+    "category": {
+        "id": 1,
+        "title": "Music",
+        "banner_img": "https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800"
+    }
+Started PUT "/events/1" for ::1 at 2022-10-24 08:52:34 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+    "category_id": 1,
+    "title": "Afrika Concert",
+    "event_date": "2022-12-12T10:00:00.000Z",
+    "early_booking_end_date": "2022-11-19T00:00:00.000Z",
+    "early_booking_price_regular": 1200,
+    "early_booking_price_vip": 2000,
+    "location": "afraha stadium Nakuru",
+    "regular_price": 1600,
+    "vip_price": 2400,
+    "vip_no_of_tickets": 1000,
+    "regular_no_of_tickets": 4000,
+    "banner_img": "https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",
+    "description": "Enjoy our african diverse culture.",
+    "image_url1": "https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",
+    "image_url2": "https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg",
+    "category": {
+        "id": 1,
+        "title": "Music",
+        "banner_img": "https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800"
+    }
+Processing by EventsController#update as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 164)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/events_controller.rb:26:in `find_event'
+app/controllers/events_controller.rb:19:in `update'
+Started PATCH "/events/1" for ::1 at 2022-10-24 08:52:48 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+    "category_id": 1,
+    "title": "Afrika Concert",
+    "event_date": "2022-12-12T10:00:00.000Z",
+    "early_booking_end_date": "2022-11-19T00:00:00.000Z",
+    "early_booking_price_regular": 1200,
+    "early_booking_price_vip": 2000,
+    "location": "afraha stadium Nakuru",
+    "regular_price": 1600,
+    "vip_price": 2400,
+    "vip_no_of_tickets": 1000,
+    "regular_no_of_tickets": 4000,
+    "banner_img": "https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",
+    "description": "Enjoy our african diverse culture.",
+    "image_url1": "https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",
+    "image_url2": "https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg",
+    "category": {
+        "id": 1,
+        "title": "Music",
+        "banner_img": "https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800"
+    }
+Processing by EventsController#update as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 153)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/events_controller.rb:26:in `find_event'
+app/controllers/events_controller.rb:19:in `update'
+Started PATCH "/events/1" for ::1 at 2022-10-24 08:53:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+    "category_id": 1,
+    "title": "Afrika Concert",
+    "event_date": "2022-12-12T10:00:00.000Z",
+    "early_booking_end_date": "2022-11-19T00:00:00.000Z",
+    "early_booking_price_regular": 1200,
+    "early_booking_price_vip": 2000,
+    "location": "afraha stadium Nakuru",
+    "regular_price": 1600,
+    "vip_price": 2400,
+    "vip_no_of_tickets": 1000,
+    "regular_no_of_tickets": 4000,
+    "banner_img": "https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",
+    "description": "Enjoy our african diverse culture.",
+    "image_url1": "https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",
+    "image_url2": "https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg",
+    "category": {
+        "id": 1,
+        "title": "Music",
+        "banner_img": "https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800"
+    }
+Processing by EventsController#update as */*
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 17306)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<EventsController:0x0000000001dcb8>):
+  
+app/controllers/events_controller.rb:19:in `update'
+Started PATCH "/events/1" for ::1 at 2022-10-24 08:54:28 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+    "category_id": 1,
+    "title": "Afrika Concert",
+    "event_date": "2022-12-12T10:00:00.000Z",
+    "early_booking_end_date": "2022-11-19T00:00:00.000Z",
+    "early_booking_price_regular": 1200,
+    "early_booking_price_vip": 2000,
+    "location": "afraha stadium Nakuru",
+    "regular_price": 1600,
+    "vip_price": 2400,
+    "vip_no_of_tickets": 1000,
+    "regular_no_of_tickets": 4000,
+    "banner_img": "https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",
+    "description": "Enjoy our african diverse culture.",
+    "image_url1": "https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",
+    "image_url2": "https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg",
+    "category": {
+        "id": 1,
+        "title": "Music",
+        "banner_img": "https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800"
+    }
+Processing by EventsController#update as */*
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1976)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<EventsController:0x0000000001dd80>):
+  
+app/controllers/events_controller.rb:19:in `update'
+Started PATCH "/events/1" for ::1 at 2022-10-24 08:54:51 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+    "category_id": 1,
+    "title": "Afrika Concert",
+    "event_date": "2022-12-12T10:00:00.000Z",
+    "early_booking_end_date": "2022-11-19T00:00:00.000Z",
+    "early_booking_price_regular": 1200,
+    "early_booking_price_vip": 2000,
+    "location": "afraha stadium Nakuru",
+    "regular_price": 1600,
+    "vip_price": 2400,
+    "vip_no_of_tickets": 1000,
+    "regular_no_of_tickets": 4000,
+    "banner_img": "https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",
+    "description": "Enjoy our african diverse culture.",
+    "image_url1": "https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",
+    "image_url2": "https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg",
+    "category": {
+        "id": 1,
+        "title": "Music",
+        "banner_img": "https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800"
+    }
+Processing by EventsController#update as */*
+Completed 400 Bad Request in 42949ms (ActiveRecord: 0.0ms | Allocations: 78325)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/events_controller.rb:27:in `find_event'
+app/controllers/events_controller.rb:20:in `update'
+Started PATCH "/events/1" for ::1 at 2022-10-24 08:55:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EventsController#update as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"1", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:27:in `find_event'
+[31mUnpermitted parameters: :id, :event. Context: { controller: EventsController, action: update, request: #<ActionDispatch::Request:0x00007f67cc9770a8>, params: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "controller"=>"events", "action"=>"update", "id"=>"1", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:21:in `update'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:21:in `update'
+  [1m[36mEvent Update (58.0ms)[0m  [1m[33mUPDATE `events` SET `events`.`regular_price` = 1600, `events`.`vip_price` = 2400, `events`.`updated_at` = '2022-10-24 05:56:12.208371' WHERE `events`.`id` = 1[0m
+  ↳ app/controllers/events_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (60.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:21:in `update'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 202 Accepted in 29553ms (Views: 83.9ms | ActiveRecord: 123.0ms | Allocations: 112635)
+
+
+Started PATCH "/events/1" for ::1 at 2022-10-24 08:56:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EventsController#update as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"1", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:28:in `find_event'
+[31mUnpermitted parameters: :id, :event. Context: { controller: EventsController, action: update, request: #<ActionDispatch::Request:0x00007f4a0494dc20>, params: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "controller"=>"events", "action"=>"update", "id"=>"1", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:21:in `update'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:21:in `update'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (2.51ms)
+Completed 202 Accepted in 23504ms (Views: 38.8ms | ActiveRecord: 3.0ms | Allocations: 111355)
+
+
+Started GET "/categories" for ::1 at 2022-10-24 08:58:22 +0300
+Processing by CategoriesController#index as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "category"=>{"title"=>"Afrika Concert", "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000"}}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 8[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (39.1ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 5.7ms | Allocations: 23002)
+
+
+Started GET "/events" for ::1 at 2022-10-24 08:58:56 +0300
+Processing by EventsController#index as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.92ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 1.7ms | Allocations: 9723)
+
+
+Started DELETE "/events/7" for ::1 at 2022-10-24 09:08:36 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/events/7"):
+  
+Started DELETE "/events/7" for ::1 at 2022-10-24 09:11:43 +0300
+Processing by EventsController#destroy as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "id"=>"7", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1600, "vip_price"=>2400, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:32:in `find_event'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:26:in `destroy'
+  [1m[36mEvent Destroy (42.6ms)[0m  [1m[31mDELETE FROM `events` WHERE `events`.`id` = 7[0m
+  ↳ app/controllers/events_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (138.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:26:in `destroy'
+Completed 204 No Content in 192ms (ActiveRecord: 182.2ms | Allocations: 5522)
+
+
