@@ -3,8 +3,10 @@ class CreateEvents < ActiveRecord::Migration[7.0]
     create_table :events do |t|
       t.integer :category_id
       t.string :title
-      t.datetime :event_date
-      t.datetime :early_booking_end_date
+      t.date :event_date
+      t.time :event_time
+      t.date :early_booking_end_date
+      t.time :early_booking_end_time
       t.integer :early_booking_price_regular
       t.integer :early_booking_price_vip
       t.string :location
