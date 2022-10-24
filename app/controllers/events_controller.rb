@@ -13,6 +13,10 @@ class EventsController < ApplicationController
         render json: event,status: :created
     end
 
+    
+
+
+
     private
 
     def find_event

@@ -7912,3 +7912,363 @@ Processing by SessionsController#create as */*
 Completed 201 Created in 300ms (Views: 7.6ms | ActiveRecord: 1.9ms | Allocations: 2958)
 
 
+Started GET "/categories" for ::1 at 2022-10-24 08:10:56 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories" for ::1 at 2022-10-24 08:17:18 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories" for ::1 at 2022-10-24 08:17:34 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories" for ::1 at 2022-10-24 08:18:01 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: jeska.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories" for ::1 at 2022-10-24 08:18:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CategoriesController#index as */*
+  Parameters: {"category_id"=>3, "title"=>"Call of Duty", "event_date"=>"2022-12-12T08:00:00.000Z", "early_booking_end_date"=>"2022-12-01T08:00:00.000Z", "early_booking_price_regular"=>1000, "early_booking_price_vip"=>1000, "location"=>"Westgate Mall Nairobi", "regular_price"=>2000, "vip_price"=>2000, "vip_no_of_tickets"=>500, "regular_no_of_tickets"=>500, "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg", "description"=>"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served", "image_url1"=>"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg", "image_url2"=>"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=", "category"=>{"title"=>"Call of Duty", "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg"}}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 8[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (633.76ms)
+Completed 200 OK in 1076ms (Views: 930.7ms | ActiveRecord: 16.4ms | Allocations: 74220)
+
+
+Started GET "/categories/1" for ::1 at 2022-10-24 08:19:33 +0300
+Processing by CategoriesController#show as */*
+  Parameters: {"category_id"=>3, "title"=>"Call of Duty", "event_date"=>"2022-12-12T08:00:00.000Z", "early_booking_end_date"=>"2022-12-01T08:00:00.000Z", "early_booking_price_regular"=>1000, "early_booking_price_vip"=>1000, "location"=>"Westgate Mall Nairobi", "regular_price"=>2000, "vip_price"=>2000, "vip_no_of_tickets"=>500, "regular_no_of_tickets"=>500, "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg", "description"=>"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served", "image_url1"=>"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg", "image_url2"=>"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=", "id"=>"1", "category"=>{"title"=>"Call of Duty", "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg"}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:8:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`category_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:9:in `show'
+[active_model_serializers] Rendered CategorySerializer with ActiveModelSerializers::Adapter::Attributes (16.04ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 3.0ms | Allocations: 11393)
+
+
+Started GET "/events" for ::1 at 2022-10-24 08:20:21 +0300
+Processing by EventsController#index as */*
+  Parameters: {"category_id"=>3, "title"=>"Call of Duty", "event_date"=>"2022-12-12T08:00:00.000Z", "early_booking_end_date"=>"2022-12-01T08:00:00.000Z", "early_booking_price_regular"=>1000, "early_booking_price_vip"=>1000, "location"=>"Westgate Mall Nairobi", "regular_price"=>2000, "vip_price"=>2000, "vip_no_of_tickets"=>500, "regular_no_of_tickets"=>500, "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg", "description"=>"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served", "image_url1"=>"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg", "image_url2"=>"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=", "event"=>{"category_id"=>3, "title"=>"Call of Duty", "event_date"=>"2022-12-12T08:00:00.000Z", "early_booking_end_date"=>"2022-12-01T08:00:00.000Z", "early_booking_price_regular"=>1000, "early_booking_price_vip"=>1000, "location"=>"Westgate Mall Nairobi", "regular_price"=>2000, "vip_price"=>2000, "vip_no_of_tickets"=>500, "regular_no_of_tickets"=>500, "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg", "description"=>"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served", "image_url1"=>"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg", "image_url2"=>"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI="}}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.28ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 3.5ms | Allocations: 15089)
+
+
+Started GET "/events/1" for ::1 at 2022-10-24 08:22:38 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EventsController#show as */*
+  Parameters: {"category_id"=>3, "title"=>"Call of Duty", "event_date"=>"2022-12-12T08:00:00.000Z", "early_booking_end_date"=>"2022-12-01T08:00:00.000Z", "early_booking_price_regular"=>1000, "early_booking_price_vip"=>1000, "location"=>"Westgate Mall Nairobi", "regular_price"=>2000, "vip_price"=>2000, "vip_no_of_tickets"=>500, "regular_no_of_tickets"=>500, "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg", "description"=>"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served", "image_url1"=>"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg", "image_url2"=>"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=", "id"=>"1", "event"=>{"category_id"=>3, "title"=>"Call of Duty", "event_date"=>"2022-12-12T08:00:00.000Z", "early_booking_end_date"=>"2022-12-01T08:00:00.000Z", "early_booking_price_regular"=>1000, "early_booking_price_vip"=>1000, "location"=>"Westgate Mall Nairobi", "regular_price"=>2000, "vip_price"=>2000, "vip_no_of_tickets"=>500, "regular_no_of_tickets"=>500, "banner_img"=>"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg", "description"=>"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served", "image_url1"=>"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg", "image_url2"=>"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI="}}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:21:in `find_event'
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:8:in `show'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (8.37ms)
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 3.0ms | Allocations: 8675)
+
+
+Started POST "/events" for ::1 at 2022-10-24 08:23:47 +0300
+Processing by EventsController#create as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+[31mUnpermitted parameter: :event. Context: { controller: EventsController, action: create, request: #<ActionDispatch::Request:0x00005609f967f170>, params: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "controller"=>"events", "action"=>"create", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_price"=>2300, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+  [1m[36mEvent Create (36.9ms)[0m  [1m[32mINSERT INTO `events` (`category_id`, `title`, `event_date`, `early_booking_end_date`, `early_booking_price_regular`, `early_booking_price_vip`, `location`, `regular_price`, `vip_price`, `vip_no_of_tickets`, `regular_no_of_tickets`, `banner_img`, `description`, `image_url1`, `image_url2`, `created_at`, `updated_at`) VALUES (1, 'Afrika Concert', '2022-12-12 10:00:00', '2022-11-19 00:00:00', 1200, 2000, 'afraha stadium Nakuru', 1500, 2300, 1000, 4000, 'https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000', 'Enjoy our african diverse culture.', 'https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg', 'https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg', '2022-10-24 05:23:47.926316', '2022-10-24 05:23:47.926316')[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (103.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (2.14ms)
+Completed 201 Created in 155ms (Views: 3.8ms | ActiveRecord: 140.9ms | Allocations: 4004)
+
+
+Started POST "/events" for ::1 at 2022-10-24 08:32:48 +0300
+Processing by EventsController#create as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+[31mUnpermitted parameter: :event. Context: { controller: EventsController, action: create, request: #<ActionDispatch::Request:0x00007fc240ad25a0>, params: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "controller"=>"events", "action"=>"create", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.2ms | Allocations: 12732)
+
+
+  
+NoMethodError (undefined method `vip_no_tickets' for #<Event:0x00007fc2409f9868>
+Did you mean?  vip_no_of_tickets
+               vip_no_of_tickets?
+               vip_no_of_tickets=):
+  
+app/controllers/events_controller.rb:12:in `create'
+Started POST "/events" for ::1 at 2022-10-24 08:33:26 +0300
+Processing by EventsController#create as */*
+  Parameters: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+[31mUnpermitted parameter: :event. Context: { controller: EventsController, action: create, request: #<ActionDispatch::Request:0x00007fc24c97d4f0>, params: {"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "controller"=>"events", "action"=>"create", "event"=>{"category_id"=>1, "title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/events_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 422 Unprocessable Entity in 1561ms (Views: 22.0ms | ActiveRecord: 3.5ms | Allocations: 704713)
+
+
+Started POST "/events" for ::1 at 2022-10-24 08:34:26 +0300
+Processing by EventsController#create as */*
+  Parameters: {"title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "event"=>{"title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}}
+[31mUnpermitted parameter: :event. Context: { controller: EventsController, action: create, request: #<ActionDispatch::Request:0x00007fc2398495d8>, params: {"title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg", "controller"=>"events", "action"=>"create", "event"=>{"title"=>"Afrika Concert", "event_date"=>"2022-12-12T10:00:00.000Z", "early_booking_end_date"=>"2022-11-19T00:00:00.000Z", "early_booking_price_regular"=>1200, "early_booking_price_vip"=>2000, "location"=>"afraha stadium Nakuru", "regular_price"=>1500, "vip_no_of_tickets"=>1000, "regular_no_of_tickets"=>4000, "banner_img"=>"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000", "description"=>"Enjoy our african diverse culture.", "image_url1"=>"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg", "image_url2"=>"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 13ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 8184)
+
+

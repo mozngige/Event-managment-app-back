@@ -6,7 +6,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
 
     def show
         category = Category.find(params[:id])
-        render json: category,serializer:CategoryEventsSerializer,status: :ok
+        render json: category,status: :ok
     end
 
     private
