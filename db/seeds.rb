@@ -71,43 +71,41 @@ puts "Seeding the user_events table"
 
         puts "Events attended by first user"
 
-userEvent1 = UserEvent.create(user_id:user1.id,event_id:event1.id)
+userEvent1 = Ticket.create(ticket_no:"MusAfri001",user_id:user1.id,event_id:event1.id)
 
-userEvent2 = UserEvent.create(user_id:user1.id,event_id:event2.id)
+userEvent2 = Ticket.create(ticket_no:"MusAfro001",user_id:user1.id,event_id:event2.id)
 
-userEvent3 = UserEvent.create(user_id:user1.id, event_id:event3.id)
+userEvent3 = Ticket.create(ticket_no:"BusFinc001",user_id:user1.id, event_id:event3.id)
 
         puts "Events attended by our second user"
-userEvent4 = UserEvent.create(user_id:user3.id,event_id:event1.id)
 
-userEvent5 = UserEvent.create(user_id:user3.id,event_id:event3.id)
+userEvent4 = Ticket.create(ticket_no:"MusAfri002",user_id:user3.id,event_id:event1.id)
 
-userEvents6 = UserEvent.create(user_id:user3.id,event_id:event5.id)
+userEvent5 = Ticket.create(ticket_no:"BusFinc002",user_id:user3.id,event_id:event3.id)
+
+userEvents6 = Ticket.create(ticket_no:"GamCOD001",user_id:user3.id,event_id:event5.id)
 
     puts "Events attended by our third user"
 
-userEvent7 = UserEvent.create(user_id:user4.id,event_id:event2.id)
+userEvent7 = Ticket.create(ticket_no:"MusAfro002",user_id:user4.id,event_id:event2.id)
 
-userEvent8 = UserEvent.create(user_id:user4.id,event_id:event4.id)
+userEvent8 = Ticket.create(ticket_no:"BusGooB001",user_id:user4.id,event_id:event4.id)
 
-userEvent9 = UserEvent.create(user_id:user4.id,event_id:event6.id)
+userEvent9 = Ticket.create(ticket_no:"GamChekC001",user_id:user4.id,event_id:event6.id)
 
 
     puts "Events the current and only organiser has created"
-userEvent13 = UserEvent.create(user_id:user2.id,event_id:event1.id)
 
-userEvent14 = UserEvent.create(user_id:user2.id,event_id:event2.id)
+userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id)
 
-userEvent15 = UserEvent.create(user_id:user2.id,event_id:event3.id)
+userEvent14 = Ticket.create(ticket_no:"OgMusAfr",user_id:user2.id,event_id:event2.id)
 
-userEvent16 = UserEvent.create(user_id:user2.id,event_id:event4.id)
+userEvent15 = Ticket.create(ticket_no:"OgBusFinc",user_id:user2.id,event_id:event3.id)
 
-userEvent17 = UserEvent.create(user_id:user2.id,event_id:event5.id)
+userEvent16 = Ticket.create(ticket_no:"OgBusGooB",user_id:user2.id,event_id:event4.id)
 
-userEvent17 = UserEvent.create(user_id:user2.id,event_id:event6.id)
+userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event5.id)
 
-
-
-
+userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id)
 
 puts "End of seeding database tables"

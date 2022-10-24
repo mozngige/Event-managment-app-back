@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :create, :show]
   resources :communities, only: [:index, :create, :show]
   resources :abouts
-  resources :user_events
+  resources :tickets
   resources :events
   resources :event_categories
   resources :user_profiles
