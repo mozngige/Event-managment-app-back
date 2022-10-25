@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
+# rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
     #skip_before_action :authorize, only: [ :create,:show]
     
     def index
@@ -27,6 +27,6 @@ rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
     private
 
     def user_params
-        params.permit(:email,:username, :password, :password_confirmation, :is_organiser)
+        params.permit(:email, :username, :password, :password_confirmation, :is_organiser)
     end
 end

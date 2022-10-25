@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # The below routes shall create a user session, authenticating them and log them out on requirement
+  get "/me", to:"users#show"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 end
