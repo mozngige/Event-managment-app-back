@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :organizers, path: 'organizers', path_names:{
     sign_in: 'login',
-    sign_out: 'signout',
+    sign_out: 'logout',
     registration: 'signup'
   },
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   devise_for :users, path: 'users', path_names:{
     sign_in: 'login',
-    sign_out: 'signout',
+    sign_out: 'logout',
     registration: 'signup'
   },
 
