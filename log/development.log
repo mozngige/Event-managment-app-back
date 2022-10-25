@@ -8121,3 +8121,372 @@ Processing by UsersController#index as */*
 Completed 200 OK in 167ms (Views: 165.9ms | ActiveRecord: 46.6ms | Allocations: 23697)
 
 
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1461.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `ticketing_rails`[0m
+  [1m[35m (162.9ms)[0m  [1m[35mCREATE DATABASE `ticketing_rails` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (44.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `abouts` CASCADE[0m
+  [1m[35m (572.9ms)[0m  [1m[35mCREATE TABLE `abouts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `about_img` varchar(255), `about_description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (24.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `categories` CASCADE[0m
+  [1m[35m (339.0ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `banner_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (23.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `communities` CASCADE[0m
+  [1m[35m (390.6ms)[0m  [1m[35mCREATE TABLE `communities` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `community_description` varchar(255), `community_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (25.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `events` CASCADE[0m
+  [1m[35m (417.8ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_id` int, `title` varchar(255), `event_date` datetime(6), `early_booking_end_date` datetime(6), `early_booking_price_regular` int, `early_booking_price_vip` int, `location` varchar(255), `regular_price` int, `vip_price` int, `vip_no_of_tickets` int, `regular_no_of_tickets` int, `banner_img` varchar(255), `description` varchar(255), `image_url1` varchar(255), `image_url2` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (52.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `user_events` CASCADE[0m
+  [1m[35m (383.1ms)[0m  [1m[35mCREATE TABLE `user_events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `event_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (28.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `user_profiles` CASCADE[0m
+  [1m[35m (399.7ms)[0m  [1m[35mCREATE TABLE `user_profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `full_name` varchar(255), `avatar_img` varchar(255), `phone_number` varchar(255), `bio` text, `gender` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (28.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (521.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `username` varchar(255), `password_digest` varchar(255), `is_organiser` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (437.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (76.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20221022095313)[0m
+  [1m[35m (97.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20221020091547),
+(20221021182342),
+(20221022030747),
+(20221022050648),
+(20221022094804);
+
+[0m
+  [1m[35m (436.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-10-25 20:11:34.773879', '2022-10-25 20:11:34.773879')[0m
+  [1m[36mTRANSACTION (66.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '69959b4a273c6c0eff780c95b6534227b15d6023', '2022-10-25 20:11:34.861987', '2022-10-25 20:11:34.861987')[0m
+  [1m[36mTRANSACTION (69.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1795.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `ticketing_rails`[0m
+  [1m[35m (104.8ms)[0m  [1m[35mCREATE DATABASE `ticketing_rails` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (30.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `abouts` CASCADE[0m
+  [1m[35m (407.6ms)[0m  [1m[35mCREATE TABLE `abouts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `about_img` varchar(255), `about_description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (25.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `categories` CASCADE[0m
+  [1m[35m (439.9ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `banner_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (50.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `communities` CASCADE[0m
+  [1m[35m (417.5ms)[0m  [1m[35mCREATE TABLE `communities` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `community_description` varchar(255), `community_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (26.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `events` CASCADE[0m
+  [1m[35m (406.4ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_id` int, `title` varchar(255), `event_date` datetime(6), `early_booking_end_date` datetime(6), `early_booking_price_regular` int, `early_booking_price_vip` int, `location` varchar(255), `regular_price` int, `vip_price` int, `vip_no_of_tickets` int, `regular_no_of_tickets` int, `banner_img` varchar(255), `description` varchar(255), `image_url1` varchar(255), `image_url2` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (51.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `user_events` CASCADE[0m
+  [1m[35m (357.4ms)[0m  [1m[35mCREATE TABLE `user_events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `event_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (51.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `user_profiles` CASCADE[0m
+  [1m[35m (384.5ms)[0m  [1m[35mCREATE TABLE `user_profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `full_name` varchar(255), `avatar_img` varchar(255), `phone_number` varchar(255), `bio` text, `gender` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (28.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (409.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `username` varchar(255), `password_digest` varchar(255), `is_organiser` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (384.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (94.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20221022095313)[0m
+  [1m[35m (77.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20221020091547),
+(20221021182342),
+(20221022030747),
+(20221022050648),
+(20221022094804);
+
+[0m
+  [1m[35m (381.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-10-25 20:12:31.501127', '2022-10-25 20:12:31.501127')[0m
+  [1m[36mTRANSACTION (92.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '69959b4a273c6c0eff780c95b6534227b15d6023', '2022-10-25 20:12:31.612240', '2022-10-25 20:12:31.612240')[0m
+  [1m[36mTRANSACTION (73.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (1.3ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Music', 'https://img.freepik.com/premium-photo/guitarist-stage-background-soft-blur-concept_34200-251.jpg?w=1800', '2022-10-25 20:12:31.774117', '2022-10-25 20:12:31.774117')[0m
+  [1m[36mTRANSACTION (46.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Business', 'https://img.freepik.com/premium-psd/business-promotion-corporate-web-banner-template_120329-748.jpg?w=1380', '2022-10-25 20:12:31.831392', '2022-10-25 20:12:31.831392')[0m
+  [1m[36mTRANSACTION (58.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Games', 'https://img.freepik.com/free-psd/flat-design-video-games-template_23-2149287300.jpg?w=1380&t=st=1666405384~exp=1666405984~hmac=ca774ed95e1223ffa38e863cab0bb5b5f749c0c9d7df009e08b36e9f24712909', '2022-10-25 20:12:31.904295', '2022-10-25 20:12:31.904295')[0m
+  [1m[36mTRANSACTION (66.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Hobbies', 'https://img.freepik.com/free-vector/set-young-people-with-various-professions_74855-3784.jpg?w=1380&t=st=1666405791~exp=1666406391~hmac=8911666a4b638cebb82a60a50ec0fe4312f0d1d0a3f2b85025f49c342da7e3df', '2022-10-25 20:12:31.976299', '2022-10-25 20:12:31.976299')[0m
+  [1m[36mTRANSACTION (66.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Food & Drink', 'https://img.freepik.com/free-vector/bio-healthy-food-banner_23-2148852378.jpg?w=1380&t=st=1666405704~exp=1666406304~hmac=d9bb76f60ceb6814c634f432f01e8a4ef216f9d34038a15c0e57cd4c0a7286cf', '2022-10-25 20:12:32.048221', '2022-10-25 20:12:32.048221')[0m
+  [1m[36mTRANSACTION (65.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Performing Arts', 'https://png.pngtree.com/background/20210709/original/pngtree-passion-concert-background-picture-image_480410.jpg', '2022-10-25 20:12:32.119754', '2022-10-25 20:12:32.119754')[0m
+  [1m[36mTRANSACTION (95.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Sciences', 'https://png.pngtree.com/background/20211215/original/pngtree-real-shot-laboratory-do-experiment-test-tube-plus-pharmacy-science-biochemistry-picture-image_1475609.jpg', '2022-10-25 20:12:32.222423', '2022-10-25 20:12:32.222423')[0m
+  [1m[36mTRANSACTION (101.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `banner_img`, `created_at`, `updated_at`) VALUES ('Sport & Fitness', 'https://img.freepik.com/free-psd/sport-tech-social-media-post-template_23-2148523619.jpg?w=1380&t=st=1666406214~exp=1666406814~hmac=d4dcedec12b55d94f4828c85f98e6d3a7a86022db951fc0532c1009e942d7c04', '2022-10-25 20:12:32.328680', '2022-10-25 20:12:32.328680')[0m
+  [1m[36mTRANSACTION (59.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1574.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS `ticketing_rails`[0m
+  [1m[35m (88.0ms)[0m  [1m[35mCREATE DATABASE `ticketing_rails` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (50.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `abouts` CASCADE[0m
+  [1m[35m (350.1ms)[0m  [1m[35mCREATE TABLE `abouts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `about_img` varchar(255), `about_description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (24.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `categories` CASCADE[0m
+  [1m[35m (368.7ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `banner_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (44.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `communities` CASCADE[0m
+  [1m[35m (426.2ms)[0m  [1m[35mCREATE TABLE `communities` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `community_description` varchar(255), `community_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (25.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `events` CASCADE[0m
+  [1m[35m (373.9ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_id` int, `title` varchar(255), `event_date` datetime(6), `early_booking_end_date` datetime(6), `early_booking_price_regular` int, `early_booking_price_vip` int, `location` varchar(255), `regular_price` int, `vip_price` int, `vip_no_of_tickets` int, `regular_no_of_tickets` int, `banner_img` varchar(255), `description` varchar(255), `image_url1` varchar(255), `image_url2` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (23.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `user_events` CASCADE[0m
+  [1m[35m (372.2ms)[0m  [1m[35mCREATE TABLE `user_events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `event_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (24.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `user_profiles` CASCADE[0m
+  [1m[35m (341.6ms)[0m  [1m[35mCREATE TABLE `user_profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `full_name` varchar(255), `avatar_img` varchar(255), `phone_number` varchar(255), `bio` text, `gender` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (25.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (367.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `username` varchar(255), `password_digest` varchar(255), `is_organiser` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci[0m
+  [1m[35m (414.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (71.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20221022095313)[0m
+  [1m[35m (57.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20221020091547),
+(20221021182342),
+(20221022030747),
+(20221022050648),
+(20221022094804);
+
+[0m
+  [1m[35m (335.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-10-25 20:13:31.865213', '2022-10-25 20:13:31.865213')[0m
+  [1m[36mTRANSACTION (58.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '69959b4a273c6c0eff780c95b6534227b15d6023', '2022-10-25 20:13:31.940082', '2022-10-25 20:13:31.940082')[0m
+  [1m[36mTRANSACTION (56.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20221025202826)
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `remember_created_at` datetime(6), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1527.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `ticketing_rails`[0m
+  [1m[35m (95.1ms)[0m  [1m[35mCREATE DATABASE `ticketing_rails` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (642.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (452.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCategories (20221020091547)
+  [1m[35m (771.0ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `banner_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221020091547')[0m
+  [1m[36mTRANSACTION (70.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserProfiles (20221021182342)
+  [1m[35m (368.7ms)[0m  [1m[35mCREATE TABLE `user_profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `full_name` varchar(255), `avatar_img` varchar(255), `phone_number` varchar(255), `bio` text, `gender` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221021182342')[0m
+  [1m[36mTRANSACTION (81.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20221022030747)
+  [1m[35m (341.2ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_id` int, `title` varchar(255), `event_date` datetime(6), `early_booking_end_date` datetime(6), `early_booking_price_regular` int, `early_booking_price_vip` int, `location` varchar(255), `regular_price` int, `vip_price` int, `vip_no_of_tickets` int, `regular_no_of_tickets` int, `banner_img` varchar(255), `description` varchar(255), `image_url1` varchar(255), `image_url2` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022030747')[0m
+  [1m[36mTRANSACTION (58.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserEvents (20221022050648)
+  [1m[35m (377.9ms)[0m  [1m[35mCREATE TABLE `user_events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `event_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022050648')[0m
+  [1m[36mTRANSACTION (50.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAbouts (20221022094804)
+  [1m[35m (360.9ms)[0m  [1m[35mCREATE TABLE `abouts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `about_img` varchar(255), `about_description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022094804')[0m
+  [1m[36mTRANSACTION (67.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCommunities (20221022095313)
+  [1m[35m (385.6ms)[0m  [1m[35mCREATE TABLE `communities` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `community_description` varchar(255), `community_img` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221022095313')[0m
+  [1m[36mTRANSACTION (71.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20221025202826)
+  [1m[35m (387.2ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `remember_created_at` datetime(6), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (292.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (258.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221025202826')[0m
+  [1m[36mTRANSACTION (63.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-10-25 20:30:33.942316', '2022-10-25 20:30:33.942316')[0m
+  [1m[36mTRANSACTION (49.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-25 23:47:01 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f13f4a15dd8>, params: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'alvin@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('alvin@gmail.com', '$2a$12$QXixAhGFPVRWXiSXeGN90OqgfAuIq3hE1oV6StFFcUeLMKyXK51JG', NULL, NULL, NULL, '2022-10-25 20:47:02.529523', '2022-10-25 20:47:02.529523')[0m
+  [1m[36mTRANSACTION (73.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 504ms (Views: 5.5ms | ActiveRecord: 89.1ms | Allocations: 38443)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-25 23:47:15 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_confirmation, :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f13f4b70a98>, params: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'alvin@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameters: :password_confirmation, :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f13f4b70a98>, params: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:21:in `create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.01ms)
+Completed 200 OK in 329ms (Views: 23.0ms | ActiveRecord: 3.5ms | Allocations: 3318)
+
+
+Started DELETE "/users/logout" for 127.0.0.1 at 2022-10-25 23:47:25 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/logout"):
+  
+Started DELETE "/users/signout" for 127.0.0.1 at 2022-10-25 23:47:38 +0300
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 22ms (Views: 3.9ms | ActiveRecord: 1.8ms | Allocations: 2395)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('4823492743188718095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateOrganizers (20221025205706)
+  [1m[35m (643.6ms)[0m  [1m[35mCREATE TABLE `organizers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `remember_created_at` datetime(6), `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime(6), `last_sign_in_at` datetime(6), `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime(6), `confirmation_sent_at` datetime(6), `unconfirmed_email` varchar(255), `failed_attempts` int DEFAULT 0 NOT NULL, `unlock_token` varchar(255), `locked_at` datetime(6), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (230.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_organizers_on_email` ON `organizers` (`email`)[0m
+  [1m[35m (228.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_organizers_on_reset_password_token` ON `organizers` (`reset_password_token`)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221025205706')[0m
+  [1m[36mTRANSACTION (56.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4823492743188718095')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-26 00:08:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Organizers):
+  
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-26 00:12:13 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f13f4886e40>, params: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'alvin@gmail.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 3108ms (Views: 4.8ms | ActiveRecord: 4.9ms | Allocations: 702369)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-26 00:12:55 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f13e95906b0>, params: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'alvin1@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('alvin1@gmail.com', '$2a$12$7nQ3EstjALV1sx4.P3xBs.Xo6.VDYl/LwmGUwawuEY9Jd5qrp0jMm', NULL, NULL, NULL, '2022-10-25 21:12:55.360621', '2022-10-25 21:12:55.360621')[0m
+  [1m[36mTRANSACTION (345.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 693ms (Views: 11.9ms | ActiveRecord: 351.3ms | Allocations: 4883)
+
+
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-26 00:13:10 +0300
+  
+ActionController::RoutingError (uninitialized constant Organizers):
+  
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-26 00:15:30 +0300
+  
+ActionController::RoutingError (uninitialized constant Organizers):
+  
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-26 00:17:16 +0300
+  
+ActionController::RoutingError (uninitialized constant Organizers):
+  
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-26 00:20:01 +0300
+  
+ActionController::RoutingError (uninitialized constant Organizers):
+  
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-26 00:21:46 +0300
+Processing by Organizer::RegistrationsController#create as */*
+  Parameters: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Organizer::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f13e88d02b8>, params: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"organizer/registrations", "action"=>"create", "registration"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `organizers` WHERE `organizers`.`email` = BINARY 'alvin1@gmail.com' LIMIT 1[0m
+  [1m[36mOrganizer Create (1.2ms)[0m  [1m[32mINSERT INTO `organizers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `failed_attempts`, `unlock_token`, `locked_at`, `created_at`, `updated_at`) VALUES ('alvin1@gmail.com', '$2a$12$gaEarzYUXgKzvDgOUzFE7eeXrMoNo6ECIeymkJBu7dVok4pUbPJ1q', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, '2022-10-25 21:21:47.015866', '2022-10-25 21:21:47.015866')[0m
+  [1m[36mTRANSACTION (60.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 530ms (Views: 15.9ms | ActiveRecord: 88.9ms | Allocations: 26047)
+
+
+Started POST "/organizers/login" for 127.0.0.1 at 2022-10-26 00:22:10 +0300
+Processing by Organizer::SessionsController#create as */*
+  Parameters: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_confirmation, :session. Context: { controller: Organizer::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f13f4d54760>, params: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"organizer/sessions", "action"=>"create", "session"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mOrganizer Load (1.2ms)[0m  [1m[34mSELECT `organizers`.* FROM `organizers` WHERE `organizers`.`email` = 'alvin1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/organizer/sessions_controller.rb:6:in `create'
+[31mUnpermitted parameters: :password_confirmation, :session. Context: { controller: Organizer::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f13f4d54760>, params: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"organizer/sessions", "action"=>"create", "session"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/organizer/sessions_controller.rb:8:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Organizer (0.76ms)
+Completed 200 OK in 352ms (Views: 5.8ms | ActiveRecord: 6.0ms | Allocations: 4670)
+
+
+Started DELETE "/organizers/signout" for 127.0.0.1 at 2022-10-26 00:22:29 +0300
+Processing by Organizer::SessionsController#destroy as */*
+  Parameters: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 2.7ms | Allocations: 1712)
+
+

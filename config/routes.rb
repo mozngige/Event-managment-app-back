@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  devise_for :organizers, path: 'organizers', path_names:{
+    sign_in: 'login',
+    sign_out: 'signout',
+    registration: 'signup'
+  },
+
+  controllers:{
+    sessions: 'organizer/sessions',
+    password: 'organizer/passwords',
+    registrations: 'organizer/registrations'
+  }
+
+  devise_for :users, path: 'users', path_names:{
+    sign_in: 'login',
+    sign_out: 'signout',
+    registration: 'signup'
+  },
+
+  controllers:{
+    sessions: 'users/sessions',
+    password: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+
   resources :users, only: [:index, :create, :show]
   resources :communities, only: [:index, :create, :show]
   resources :abouts

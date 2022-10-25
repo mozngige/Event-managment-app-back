@@ -81,6 +81,12 @@ GEM
     debug (1.6.2)
       irb (>= 1.3.6)
       reline (>= 0.3.1)
+    devise (4.8.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     dotenv (2.8.1)
     erubi (1.11.0)
     faker (2.23.0)
@@ -96,6 +102,8 @@ GEM
     irb (1.4.2)
       reline (>= 0.3.0)
     jsonapi-renderer (0.2.2)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     jwt (2.5.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -128,6 +136,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     phony (2.20.1)
     phony_rails (0.15.0)
       activesupport (>= 3.0)
@@ -180,10 +189,17 @@ GEM
       redis (>= 2.2)
     reline (0.3.1)
       io-console (~> 0.5)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
+    serializer (1.0.2)
+      rails (> 3.0.0)
     thor (1.2.1)
     timeout (0.3.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -197,8 +213,10 @@ DEPENDENCIES
   active_model_serializers
   bcrypt
   debug
+  devise
   dotenv
   faker
+  jsonapi-serializer
   jwt
   mpesa_stk
   mysql2 (~> 0.5)
@@ -206,6 +224,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.4)
+  serializer
   tzinfo-data
 
 RUBY VERSION
