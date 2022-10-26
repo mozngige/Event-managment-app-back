@@ -11,6 +11,7 @@ class UserProfilesController < ApplicationController
         user_profile = find_profile
         render json: user_profile, status: :created
     end
+    
     def update
         user_profile = find_profile
         user_profile.update(user_params)
