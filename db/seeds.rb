@@ -143,18 +143,29 @@ end
     )
 end
 
-5.times do
-    HomeBanner.create(
-        title: Faker::Lorem.sentence,
-        image_url: [
-            "https://p4.wallpaperbetter.com/wallpaper/879/304/9/doctor-strange-8k-4k-banner-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/476/313/301/dominik-mayer-fantasy-art-banner-knight-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/762/486/529/the-banner-saga-video-games-artwork-concept-art-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/51/170/500/watch-dogs-banner-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/196/761/195/game-of-thrones-house-crests-assorted-yellow-red-and-black-wolf-banners-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/717/711/586/razer-inc-banner-hd-wallpaper-preview.jpg"
-        ].sample
-    )
-end
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/51/170/500/watch-dogs-banner-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/476/313/301/dominik-mayer-fantasy-art-banner-knight-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/196/761/195/game-of-thrones-house-crests-assorted-yellow-red-and-black-wolf-banners-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/717/711/586/razer-inc-banner-hd-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/762/486/529/the-banner-saga-video-games-artwork-concept-art-wallpaper-preview.jpg"
+)
 
 puts "Done Seeding"
