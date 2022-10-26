@@ -11,28 +11,28 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
-  create_table "abouts", charset: "utf8mb4", force: :cascade do |t|
+  create_table "abouts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "about_img"
     t.string "about_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", charset: "utf8mb4", force: :cascade do |t|
+  create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
     t.string "banner_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "communities", charset: "utf8mb4", force: :cascade do |t|
+  create_table "communities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "community_description"
     t.string "community_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "events", charset: "utf8mb4", force: :cascade do |t|
+  create_table "events", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "category_id"
     t.string "title"
     t.date "event_date"
@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tickets", charset: "utf8mb4", force: :cascade do |t|
+  create_table "tickets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "ticket_no"
     t.integer "user_id"
     t.integer "event_id"
@@ -62,7 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_profiles", charset: "utf8mb4", force: :cascade do |t|
+  create_table "user_profiles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "full_name"
     t.string "avatar_img"
@@ -73,7 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email"
     t.string "username"
     t.string "password_digest"

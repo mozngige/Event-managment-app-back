@@ -8,17 +8,17 @@
 
 puts "Seeding Database tables"
 
-puts "Seeding user data"
+# puts "Seeding user data"
 
-user1 = User.create(email:"kihahumutagah@gmail.com",username:"mutaga",password:"codewarleets",is_organiser:false)
+# user1 = User.create(email:"kihahumutagah@gmail.com",username:"mutaga",password:"codewarleets",is_organiser:false)
 
-user2 = User.create(email:"jeskajenipher@gmail.com", username:"jeska",password:"jeskajj19",is_organiser:true)
+# user2 = User.create(email:"jeskajenipher@gmail.com", username:"jeska",password:"jeskajj19",is_organiser:true)
 
-user3 = User.create(email:"keithwesley@gmail.com",username:"keith",password:"keithwestie13",is_organiser:false)
+# user3 = User.create(email:"keithwesley@gmail.com",username:"keith",password:"keithwestie13",is_organiser:false)
 
-user4 = User.create(email:"nyalemwasaha@gmail.com",username:"elvis",password:"mintnyale23",is_organiser:false)
+# user4 = User.create(email:"nyalemwasaha@gmail.com",username:"elvis",password:"mintnyale23",is_organiser:false)
 
-user5 = User.create(email:"kibirafrancis@gmail.com",username:"francis",password:"francran",is_organiser:false)
+# user5 = User.create(email:"kibirafrancis@gmail.com",username:"francis",password:"francran",is_organiser:false)
 
 
 puts "Seeding events category table"
@@ -40,17 +40,17 @@ event_category7 = Category.create(title:"Sciences",banner_img:"https://png.pngtr
 event_category8 = Category.create(title:"Sport & Fitness",banner_img:"https://img.freepik.com/free-psd/sport-tech-social-media-post-template_23-2148523619.jpg?w=1380&t=st=1666406214~exp=1666406814~hmac=d4dcedec12b55d94f4828c85f98e6d3a7a86022db951fc0532c1009e942d7c04")
 
 
-puts "Seeding user profile"
+# puts "Seeding user profile"
 
-user_profile1 = UserProfile.create(user_id:user1.id,full_name:"Kihahu Mutaga",avatar_img: Faker::Avatar.image,phone_number:"0727249154",bio:"Learn rules like a pro and break them like an artist",gender:"male") 
+# user_profile1 = UserProfile.create(user_id:user1.id,full_name:"Kihahu Mutaga",avatar_img: Faker::Avatar.image,phone_number:"0727249154",bio:"Learn rules like a pro and break them like an artist",gender:"male") 
 
-user_profile2 = UserProfile.create(user_id:user2.id,full_name:"Jeska Jenipher",avatar_img: Faker::Avatar.image,phone_number:"07421480348",bio:"Bring your best shot",gender:"female") 
+# user_profile2 = UserProfile.create(user_id:user2.id,full_name:"Jeska Jenipher",avatar_img: Faker::Avatar.image,phone_number:"07421480348",bio:"Bring your best shot",gender:"female") 
 
-user_profile3 = UserProfile.create(user_id:user3.id,full_name:"Keith Wesley",avatar_img: Faker::Avatar.image, phone_number:"0726842187",bio:"I talk to the future",gender:"male") 
+# user_profile3 = UserProfile.create(user_id:user3.id,full_name:"Keith Wesley",avatar_img: Faker::Avatar.image, phone_number:"0726842187",bio:"I talk to the future",gender:"male") 
 
-user_profile4 = UserProfile.create(user_id:user4.id,full_name:"Nyale Mwasaha",avatar_img: Faker::Avatar.image, phone_number:"0727979657", bio:"Take memories leave footprints", gender:"male") 
+# user_profile4 = UserProfile.create(user_id:user4.id,full_name:"Nyale Mwasaha",avatar_img: Faker::Avatar.image, phone_number:"0727979657", bio:"Take memories leave footprints", gender:"male") 
 
-user_profile5 = UserProfile.create(user_id:user5.id,full_name:"Francis Kibira",avatar_img: Faker::Avatar.image, phone_number: "0700595184",bio:"Have fun when you still can have",gender:"male")
+# user_profile5 = UserProfile.create(user_id:user5.id,full_name:"Francis Kibira",avatar_img: Faker::Avatar.image, phone_number: "0700595184",bio:"Have fun when you still can have",gender:"male")
 
 puts "Seeding events tables"
 
@@ -67,45 +67,45 @@ event5 = Event.create(category_id:event_category3.id,title:"Call of Duty",event_
 event6 = Event.create(category_id:event_category3.id,title:"CheckChess",event_date:"2022-12-20",event_time:"08:00",early_booking_end_date:"2022-12-10",early_booking_end_time:"08:00",early_booking_price_regular:2000,early_booking_price_vip:2000,location:"Desert Rose Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:2500,regular_no_of_tickets:2500,banner_img:"https://thumbs.dreamstime.com/b/chessboard-chess-pieces-gray-background-banner-212681982.jpg",description:"Battle for it. Winner gets a 300,000 reward.Come with own Food and drink",image_url1:"https://media.istockphoto.com/photos/businessman-suit-with-chess-board-game-plan-stratgy-and-tactic-picture-id1256422923?b=1&k=20&m=1256422923&s=170667a&w=0&h=t039Cn8gv2CC2IpPkhbFxgTopvc6Le6t6hbWsCRDsyc=",image_url2:"https://thumbs.dreamstime.com/b/closeup-king-chess-piece-defeated-enemy-trade-competitor-checkmate-end-chessboard-game-businessman-moving-to-success-158990889.jpg")
 
 
-puts "Seeding the user_events table"
+# puts "Seeding the user_events table"
 
-        puts "Events attended by first user"
+#         puts "Events attended by first user"
 
-userEvent1 = Ticket.create(ticket_no:"MusAfri001",user_id:user1.id,event_id:event1.id)
+# userEvent1 = Ticket.create(ticket_no:"MusAfri001",user_id:user1.id,event_id:event1.id)
 
-userEvent2 = Ticket.create(ticket_no:"MusAfro001",user_id:user1.id,event_id:event2.id)
+# userEvent2 = Ticket.create(ticket_no:"MusAfro001",user_id:user1.id,event_id:event2.id)
 
-userEvent3 = Ticket.create(ticket_no:"BusFinc001",user_id:user1.id, event_id:event3.id)
+# userEvent3 = Ticket.create(ticket_no:"BusFinc001",user_id:user1.id, event_id:event3.id)
 
-        puts "Events attended by our second user"
+#         puts "Events attended by our second user"
 
-userEvent4 = Ticket.create(ticket_no:"MusAfri002",user_id:user3.id,event_id:event1.id)
+# userEvent4 = Ticket.create(ticket_no:"MusAfri002",user_id:user3.id,event_id:event1.id)
 
-userEvent5 = Ticket.create(ticket_no:"BusFinc002",user_id:user3.id,event_id:event3.id)
+# userEvent5 = Ticket.create(ticket_no:"BusFinc002",user_id:user3.id,event_id:event3.id)
 
-userEvents6 = Ticket.create(ticket_no:"GamCOD001",user_id:user3.id,event_id:event5.id)
+# userEvents6 = Ticket.create(ticket_no:"GamCOD001",user_id:user3.id,event_id:event5.id)
 
-    puts "Events attended by our third user"
+#     puts "Events attended by our third user"
 
-userEvent7 = Ticket.create(ticket_no:"MusAfro002",user_id:user4.id,event_id:event2.id)
+# userEvent7 = Ticket.create(ticket_no:"MusAfro002",user_id:user4.id,event_id:event2.id)
 
-userEvent8 = Ticket.create(ticket_no:"BusGooB001",user_id:user4.id,event_id:event4.id)
+# userEvent8 = Ticket.create(ticket_no:"BusGooB001",user_id:user4.id,event_id:event4.id)
 
-userEvent9 = Ticket.create(ticket_no:"GamChekC001",user_id:user4.id,event_id:event6.id)
+# userEvent9 = Ticket.create(ticket_no:"GamChekC001",user_id:user4.id,event_id:event6.id)
 
 
-    puts "Events the current and only organiser has created"
+#     puts "Events the current and only organiser has created"
 
-userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id)
+# userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id)
 
-userEvent14 = Ticket.create(ticket_no:"OgMusAfr",user_id:user2.id,event_id:event2.id)
+# userEvent14 = Ticket.create(ticket_no:"OgMusAfr",user_id:user2.id,event_id:event2.id)
 
-userEvent15 = Ticket.create(ticket_no:"OgBusFinc",user_id:user2.id,event_id:event3.id)
+# userEvent15 = Ticket.create(ticket_no:"OgBusFinc",user_id:user2.id,event_id:event3.id)
 
-userEvent16 = Ticket.create(ticket_no:"OgBusGooB",user_id:user2.id,event_id:event4.id)
+# userEvent16 = Ticket.create(ticket_no:"OgBusGooB",user_id:user2.id,event_id:event4.id)
 
-userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event5.id)
+# userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event5.id)
 
-userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id)
+# userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id)
 
-puts "End of seeding database tables"
+# puts "End of seeding database tables"
