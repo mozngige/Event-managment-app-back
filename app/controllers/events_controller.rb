@@ -33,7 +33,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
     end
 
     def event_params
-        params.permit(:category_id,:title,:event_date,:event_time,:early_booking_end_date,:early_booking_price_regular,:early_booking_price_vip,:location,:regular_price,:vip_price,:vip_no_of_tickets,:regular_no_of_tickets,:banner_img,:description,:image_url1,:image_url2)
+        params.permit(:category_id,:title,:event_date,:event_time, :ticket_format,:early_booking_end_date,:early_booking_price_regular,:early_booking_price_vip,:location,:regular_price,:vip_price,:vip_no_of_tickets,:regular_no_of_tickets,:banner_img,:description,:image_url1,:image_url2)
     end
 
     def unfound_response
