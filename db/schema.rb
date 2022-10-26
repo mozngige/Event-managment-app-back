@@ -10,8 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
   create_table "abouts", charset: "utf8mb4", force: :cascade do |t|
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_10_26_111518) do
+  create_table "abouts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+>>>>>>> development
     t.string "about_img"
     t.text "about_description"
     t.datetime "created_at", null: false
@@ -56,6 +61,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
   end
 
   create_table "tickets", charset: "utf8mb4", force: :cascade do |t|
+  create_table "home_banners", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "title"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tickets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "ticket_no"
     t.integer "user_id"
     t.integer "event_id"

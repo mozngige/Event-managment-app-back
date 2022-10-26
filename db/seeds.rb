@@ -108,8 +108,7 @@ userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event
 
 userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id, is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-
-puts "Seeding community table"
+# puts "End of seeding database tables"
 
 10.times do
     Community.create(
@@ -146,4 +145,29 @@ puts "Seeding About table"
     )
 end
 
-puts "End of seeding database tables"
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/51/170/500/watch-dogs-banner-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/476/313/301/dominik-mayer-fantasy-art-banner-knight-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/196/761/195/game-of-thrones-house-crests-assorted-yellow-red-and-black-wolf-banners-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/717/711/586/razer-inc-banner-hd-wallpaper-preview.jpg"
+)
+
+HomeBanner.create(
+    title: Faker::Lorem.sentence,
+    image_url: "https://p4.wallpaperbetter.com/wallpaper/762/486/529/the-banner-saga-video-games-artwork-concept-art-wallpaper-preview.jpg"
+)
+
+puts "Done Seeding"
