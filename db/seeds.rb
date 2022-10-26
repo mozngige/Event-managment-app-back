@@ -54,58 +54,58 @@ event_category8 = Category.create(title:"Sport & Fitness",banner_img:"https://im
 
 puts "Seeding events tables"
 
-event1 = Event.create(category_id:event_category1.id,title:"Afrika Concert",event_date:"2022-12-12", event_time:"10:00",early_booking_end_date:"2022-11-19",early_booking_end_time:"00:00",early_booking_price_regular:1200,early_booking_price_vip:2000,location:"afraha stadium Nakuru",regular_price:1500,vip_price:2300,vip_no_of_tickets:1000,regular_no_of_tickets:4000,banner_img:"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",description:"Enjoy our african diverse culture.",image_url1:"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",image_url2:"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg")
+event1 = Event.create(category_id:event_category1.id,title:"Afrika Concert",event_date:"2022-12-12", event_time:"10:00",ticket_format:"MusAfri",early_booking_end_date:"2022-11-19",early_booking_end_time:"00:00",early_booking_price_regular:1200,early_booking_price_vip:2000,location:"afraha stadium Nakuru",regular_price:1500,vip_price:2300,vip_no_of_tickets:1000,regular_no_of_tickets:4000,banner_img:"https://img.freepik.com/free-vector/beautiful-music-sound-golden-notes-background_1017-32310.jpg?w=2000",description:"Enjoy our african diverse culture.",image_url1:"https://c8.alamy.com/comp/2EGH5DT/live-music-concert-sketch-poster-with-musical-instruments-vector-design-of-musical-button-accordion-folk-bandura-and-rebec-viola-african-jembe-drum-2EGH5DT.jpg",image_url2:"https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200423/71501970-neon-live-music-concert-acoustic-party-poster-background-template-with-spotlight-and-stage-.jpg")
 
-event2 = Event.create(category_id:event_category1.id,title:"Afro Concert",event_date:"2022-12-1",event_time:"20:00",early_booking_end_date:"2022-11-19",early_booking_end_time:"20:00",early_booking_price_regular:3000,early_booking_price_vip:5000,location:"Nyali mall Mombasa",regular_price:5000,vip_price:7500,vip_no_of_tickets:"1000",regular_no_of_tickets:12000,banner_img:"https://image.shutterstock.com/shutterstock/photos/365709908/display_1500/stock-photo-amsterdam-the-netherlands-february-concert-of-african-band-from-mali-bko-quintet-at-365709908.jpg",description:"An event bringing together top artists across Africa to meet fans",image_url1:"https://www.bellanaija.com/wp-content/uploads/2022/07/279673647_1338241670017685_7307805693980761003_n-e1657274874156.jpg",image_url2:"https://i.pinimg.com/originals/1c/a1/14/1ca114b0953f2b9bf33736b98f4ea700.jpg")
+event2 = Event.create(category_id:event_category1.id,title:"Afro Concert",event_date:"2022-12-1",event_time:"20:00",ticket_format:"MusAfro",early_booking_end_date:"2022-11-19",early_booking_end_time:"20:00",early_booking_price_regular:3000,early_booking_price_vip:5000,location:"Nyali mall Mombasa",regular_price:5000,vip_price:7500,vip_no_of_tickets:"1000",regular_no_of_tickets:12000,banner_img:"https://image.shutterstock.com/shutterstock/photos/365709908/display_1500/stock-photo-amsterdam-the-netherlands-february-concert-of-african-band-from-mali-bko-quintet-at-365709908.jpg",description:"An event bringing together top artists across Africa to meet fans",image_url1:"https://www.bellanaija.com/wp-content/uploads/2022/07/279673647_1338241670017685_7307805693980761003_n-e1657274874156.jpg",image_url2:"https://i.pinimg.com/originals/1c/a1/14/1ca114b0953f2b9bf33736b98f4ea700.jpg")
 
-event3 = Event.create(category_id:event_category2.id,title:"BusyFinance",event_date:"2022-10-10",event_time:"08:00",early_booking_end_date:"2022-10-03",early_booking_end_time:"00:00",early_booking_price_regular:1200,early_booking_price_vip:1200,location:"Gateway mall Syokimau",regular_price:1200,vip_price:1200,vip_no_of_tickets:1000,regular_no_of_tickets:1000,banner_img:"https://www.varsboffin.com/images/business-finance-banner.jpg",description:"Where solutions to your financial problems are sort. how best to manage finance",image_url1:"https://www.dmu.ac.uk/webimages/study-images/courses/business-and-law/postgraduate/international-business-and-finance-img-02.jpg",image_url2:"https://media.istockphoto.com/photos/technical-financial-graph-on-technology-abstract-background-picture-id639666654?k=20&m=639666654&s=612x612&w=0&h=1xl981xcYy5J4LFQHaWRV50cDp8V1sbERtmfokDqMTw=")
+event3 = Event.create(category_id:event_category2.id,title:"BusyFinance",event_date:"2022-10-10",event_time:"08:00",ticket_format:"BusFinc",early_booking_end_date:"2022-10-03",early_booking_end_time:"00:00",early_booking_price_regular:1200,early_booking_price_vip:1200,location:"Gateway mall Syokimau",regular_price:1200,vip_price:1200,vip_no_of_tickets:1000,regular_no_of_tickets:1000,banner_img:"https://www.varsboffin.com/images/business-finance-banner.jpg",description:"Where solutions to your financial problems are sort. how best to manage finance",image_url1:"https://www.dmu.ac.uk/webimages/study-images/courses/business-and-law/postgraduate/international-business-and-finance-img-02.jpg",image_url2:"https://media.istockphoto.com/photos/technical-financial-graph-on-technology-abstract-background-picture-id639666654?k=20&m=639666654&s=612x612&w=0&h=1xl981xcYy5J4LFQHaWRV50cDp8V1sbERtmfokDqMTw=")
 
-event4 = Event.create(category_id:event_category2.id,title:"GooBad marketing",event_date:"2022-10-20",event_time:"08:00",early_booking_end_date:"2022-10-10",early_booking_end_time:"08:00",early_booking_price_regular:1000,early_booking_price_vip:1000,location:"Junction Mall Nairobi",regular_price:1000,vip_price:1000,vip_no_of_tickets:1000,regular_no_of_tickets:1000,banner_img:"https://thumbs.dreamstime.com/z/inscription-digital-marketing-website-header-banner-background-inscription-digital-marketing-website-header-banner-199406940.jpg",description:"Seeking to educate the public on how to best market their products when seeking customers",image_url1:"https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg?w=2000",image_url2:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE5w0Xbm2AiDITkBWCgbXaoc9QhkkEwKaC2ZGldLJsoQ&s")
+event4 = Event.create(category_id:event_category2.id,title:"GooBad marketing",event_date:"2022-10-20",event_time:"08:00",ticket_format:"BusGooB",early_booking_end_date:"2022-10-10",early_booking_end_time:"08:00",early_booking_price_regular:1000,early_booking_price_vip:1000,location:"Junction Mall Nairobi",regular_price:1000,vip_price:1000,vip_no_of_tickets:1000,regular_no_of_tickets:1000,banner_img:"https://thumbs.dreamstime.com/z/inscription-digital-marketing-website-header-banner-background-inscription-digital-marketing-website-header-banner-199406940.jpg",description:"Seeking to educate the public on how to best market their products when seeking customers",image_url1:"https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg?w=2000",image_url2:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE5w0Xbm2AiDITkBWCgbXaoc9QhkkEwKaC2ZGldLJsoQ&s")
 
-event5 = Event.create(category_id:event_category3.id,title:"Call of Duty",event_date:"2022-12-12",event_time:"08:00",early_booking_end_date:"2022-12-01",early_booking_end_time:"08:00",early_booking_price_regular:1000,early_booking_price_vip:1000,location:"Westgate Mall Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:500,regular_no_of_tickets:500,banner_img:"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg",description:"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served",image_url1:"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg",image_url2:"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=")
+event5 = Event.create(category_id:event_category3.id,title:"Call of Duty",event_date:"2022-12-12",event_time:"08:00",ticket_format:"GamCOD",early_booking_end_date:"2022-12-01",early_booking_end_time:"08:00",early_booking_price_regular:1000,early_booking_price_vip:1000,location:"Westgate Mall Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:500,regular_no_of_tickets:500,banner_img:"https://as1.ftcdn.net/v2/jpg/04/13/99/08/1000_F_413990886_hChS8igRgaOC4IlkIFIxiQ2EeW5U8LKf.jpg",description:"Gamers meetup to have their best experiences while gaming.Foods and drinks will be served",image_url1:"https://thumbs.dreamstime.com/b/still-life-computer-gaming-headset-lying-keyboard-still-life-computer-gaming-headset-lying-keyboard-166580321.jpg",image_url2:"https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=")
 
-event6 = Event.create(category_id:event_category3.id,title:"CheckChess",event_date:"2022-12-20",event_time:"08:00",early_booking_end_date:"2022-12-10",early_booking_end_time:"08:00",early_booking_price_regular:2000,early_booking_price_vip:2000,location:"Desert Rose Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:2500,regular_no_of_tickets:2500,banner_img:"https://thumbs.dreamstime.com/b/chessboard-chess-pieces-gray-background-banner-212681982.jpg",description:"Battle for it. Winner gets a 300,000 reward.Come with own Food and drink",image_url1:"https://media.istockphoto.com/photos/businessman-suit-with-chess-board-game-plan-stratgy-and-tactic-picture-id1256422923?b=1&k=20&m=1256422923&s=170667a&w=0&h=t039Cn8gv2CC2IpPkhbFxgTopvc6Le6t6hbWsCRDsyc=",image_url2:"https://thumbs.dreamstime.com/b/closeup-king-chess-piece-defeated-enemy-trade-competitor-checkmate-end-chessboard-game-businessman-moving-to-success-158990889.jpg")
+event6 = Event.create(category_id:event_category3.id,title:"CheckChess",event_date:"2022-12-20",event_time:"08:00",ticket_format:"GamChek",early_booking_end_date:"2022-12-10",early_booking_end_time:"08:00",early_booking_price_regular:2000,early_booking_price_vip:2000,location:"Desert Rose Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:2500,regular_no_of_tickets:2500,banner_img:"https://thumbs.dreamstime.com/b/chessboard-chess-pieces-gray-background-banner-212681982.jpg",description:"Battle for it. Winner gets a 300,000 reward.Come with own Food and drink",image_url1:"https://media.istockphoto.com/photos/businessman-suit-with-chess-board-game-plan-stratgy-and-tactic-picture-id1256422923?b=1&k=20&m=1256422923&s=170667a&w=0&h=t039Cn8gv2CC2IpPkhbFxgTopvc6Le6t6hbWsCRDsyc=",image_url2:"https://thumbs.dreamstime.com/b/closeup-king-chess-piece-defeated-enemy-trade-competitor-checkmate-end-chessboard-game-businessman-moving-to-success-158990889.jpg")
 
 
 # puts "Seeding the user_events table"
 
 #         puts "Events attended by first user"
 
-# userEvent1 = Ticket.create(ticket_no:"MusAfri001",user_id:user1.id,event_id:event1.id)
+userEvent1 = Ticket.create(ticket_no:"MusAfri1",user_id:user1.id,event_id:event1.id,is_vip: true,number_of_vip_tickets:1,is_regular: true, number_of_regular_tickets:1)
 
-# userEvent2 = Ticket.create(ticket_no:"MusAfro001",user_id:user1.id,event_id:event2.id)
+userEvent2 = Ticket.create(ticket_no:"MusAfro1",user_id:user1.id,event_id:event2.id,is_vip: true,number_of_vip_tickets:2,is_regular: false,number_of_regular_tickets:0)
 
-# userEvent3 = Ticket.create(ticket_no:"BusFinc001",user_id:user1.id, event_id:event3.id)
+userEvent3 = Ticket.create(ticket_no:"BusFinc1",user_id:user1.id, event_id:event3.id,is_vip: false, number_of_vip_tickets: 0,is_regular: true, number_of_regular_tickets:2)
 
 #         puts "Events attended by our second user"
 
-# userEvent4 = Ticket.create(ticket_no:"MusAfri002",user_id:user3.id,event_id:event1.id)
+userEvent4 = Ticket.create(ticket_no:"MusAfri2",user_id:user3.id,event_id:event1.id, is_vip: false, number_of_vip_tickets:0, is_regular:true, number_of_regular_tickets: 2)
 
-# userEvent5 = Ticket.create(ticket_no:"BusFinc002",user_id:user3.id,event_id:event3.id)
+userEvent5 = Ticket.create(ticket_no:"BusFinc2",user_id:user3.id,event_id:event3.id, is_vip: true, number_of_vip_tickets:3, is_regular: false, number_of_regular_tickets: 0)
 
-# userEvents6 = Ticket.create(ticket_no:"GamCOD001",user_id:user3.id,event_id:event5.id)
+userEvents6 = Ticket.create(ticket_no:"GamCOD1",user_id:user3.id,event_id:event5.id, is_vip: true, number_of_vip_tickets: 4, is_regular:false, number_of_regular_tickets: 0)
 
 #     puts "Events attended by our third user"
 
-# userEvent7 = Ticket.create(ticket_no:"MusAfro002",user_id:user4.id,event_id:event2.id)
+userEvent7 = Ticket.create(ticket_no:"MusAfro2",user_id:user4.id,event_id:event2.id, is_vip: true, number_of_vip_tickets: 2,is_regular: false, number_of_regular_tickets: 0)
 
-# userEvent8 = Ticket.create(ticket_no:"BusGooB001",user_id:user4.id,event_id:event4.id)
+userEvent8 = Ticket.create(ticket_no:"BusGooB1",user_id:user4.id,event_id:event4.id, is_vip: false, number_of_vip_tickets: 0, is_regular: true, number_of_regular_tickets: 4)
 
-# userEvent9 = Ticket.create(ticket_no:"GamChekC001",user_id:user4.id,event_id:event6.id)
+userEvent9 = Ticket.create(ticket_no:"GamChekC1",user_id:user4.id,event_id:event6.id, is_vip: true , number_of_vip_tickets: 6, is_regular: false, number_of_regular_tickets: 0)
 
 
 #     puts "Events the current and only organiser has created"
 
-# userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id)
+userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id, is_vip: false, number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-# userEvent14 = Ticket.create(ticket_no:"OgMusAfr",user_id:user2.id,event_id:event2.id)
+userEvent14 = Ticket.create(ticket_no:"OgMusAfr",user_id:user2.id,event_id:event2.id,is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-# userEvent15 = Ticket.create(ticket_no:"OgBusFinc",user_id:user2.id,event_id:event3.id)
+userEvent15 = Ticket.create(ticket_no:"OgBusFinc",user_id:user2.id,event_id:event3.id,is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-# userEvent16 = Ticket.create(ticket_no:"OgBusGooB",user_id:user2.id,event_id:event4.id)
+userEvent16 = Ticket.create(ticket_no:"OgBusGooB",user_id:user2.id,event_id:event4.id, is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-# userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event5.id)
+userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event5.id, is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-# userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id)
+userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id, is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
 # puts "End of seeding database tables"
