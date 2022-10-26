@@ -67,9 +67,9 @@ event5 = Event.create(category_id:event_category3.id,title:"Call of Duty",event_
 event6 = Event.create(category_id:event_category3.id,title:"CheckChess",event_date:"2022-12-20",event_time:"08:00",ticket_format:"GamChek",early_booking_end_date:"2022-12-10",early_booking_end_time:"08:00",early_booking_price_regular:2000,early_booking_price_vip:2000,location:"Desert Rose Nairobi",regular_price:2000,vip_price:2000,vip_no_of_tickets:2500,regular_no_of_tickets:2500,banner_img:"https://thumbs.dreamstime.com/b/chessboard-chess-pieces-gray-background-banner-212681982.jpg",description:"Battle for it. Winner gets a 300,000 reward.Come with own Food and drink",image_url1:"https://media.istockphoto.com/photos/businessman-suit-with-chess-board-game-plan-stratgy-and-tactic-picture-id1256422923?b=1&k=20&m=1256422923&s=170667a&w=0&h=t039Cn8gv2CC2IpPkhbFxgTopvc6Le6t6hbWsCRDsyc=",image_url2:"https://thumbs.dreamstime.com/b/closeup-king-chess-piece-defeated-enemy-trade-competitor-checkmate-end-chessboard-game-businessman-moving-to-success-158990889.jpg")
 
 
-# puts "Seeding the user_events table"
+puts "Seeding the user_events table"
 
-#         puts "Events attended by first user"
+        puts "Events attended by first user"
 
 userEvent1 = Ticket.create(ticket_no:"MusAfri1",user_id:user1.id,event_id:event1.id,is_vip: true,number_of_vip_tickets:1,is_regular: true, number_of_regular_tickets:1)
 
@@ -85,7 +85,7 @@ userEvent5 = Ticket.create(ticket_no:"BusFinc2",user_id:user3.id,event_id:event3
 
 userEvents6 = Ticket.create(ticket_no:"GamCOD1",user_id:user3.id,event_id:event5.id, is_vip: true, number_of_vip_tickets: 4, is_regular:false, number_of_regular_tickets: 0)
 
-#     puts "Events attended by our third user"
+    puts "Events attended by our third user"
 
 userEvent7 = Ticket.create(ticket_no:"MusAfro2",user_id:user4.id,event_id:event2.id, is_vip: true, number_of_vip_tickets: 2,is_regular: false, number_of_regular_tickets: 0)
 
@@ -94,7 +94,7 @@ userEvent8 = Ticket.create(ticket_no:"BusGooB1",user_id:user4.id,event_id:event4
 userEvent9 = Ticket.create(ticket_no:"GamChekC1",user_id:user4.id,event_id:event6.id, is_vip: true , number_of_vip_tickets: 6, is_regular: false, number_of_regular_tickets: 0)
 
 
-#     puts "Events the current and only organiser has created"
+    puts "Events the current and only organiser has created"
 
 userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id, is_vip: false, number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
@@ -170,4 +170,4 @@ HomeBanner.create(
     image_url: "https://p4.wallpaperbetter.com/wallpaper/762/486/529/the-banner-saga-video-games-artwork-concept-art-wallpaper-preview.jpg"
 )
 
-puts "Done Seeding"
+puts "End of seeding database tables"
