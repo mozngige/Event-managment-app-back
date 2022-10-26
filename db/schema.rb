@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
   create_table "abouts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "about_img"
-    t.string "about_description"
+    t.text "about_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
   end
 
   create_table "communities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "community_description"
+    t.text "community_description"
     t.string "community_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,7 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.string "title"
     t.date "event_date"
     t.time "event_time"
-    t.string "ticket_format"
     t.date "early_booking_end_date"
     t.time "early_booking_end_time"
     t.integer "early_booking_price_regular"
@@ -59,10 +58,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.string "ticket_no"
     t.integer "user_id"
     t.integer "event_id"
-    t.boolean "is_vip"
-    t.integer "number_of_vip_tickets"
-    t.boolean "is_regular"
-    t.integer "number_of_regular_tickets"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
