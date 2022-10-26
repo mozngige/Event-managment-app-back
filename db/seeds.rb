@@ -71,41 +71,41 @@ puts "Seeding the user_events table"
 
         puts "Events attended by first user"
 
-userEvent1 = Ticket.create(ticket_no:"MusAfri001",user_id:user1.id,event_id:event1.id)
+userEvent1 = Ticket.create(ticket_no:"MusAfri001",user_id:user1.id,event_id:event1.id,is_vip: true,number_of_vip_tickets:1,is_regular: true, number_of_regular_tickets:1)
 
-userEvent2 = Ticket.create(ticket_no:"MusAfro001",user_id:user1.id,event_id:event2.id)
+userEvent2 = Ticket.create(ticket_no:"MusAfro001",user_id:user1.id,event_id:event2.id,is_vip: true,number_of_vip_tickets:2,is_regular: false,number_of_regular_tickets:0)
 
-userEvent3 = Ticket.create(ticket_no:"BusFinc001",user_id:user1.id, event_id:event3.id)
+userEvent3 = Ticket.create(ticket_no:"BusFinc001",user_id:user1.id, event_id:event3.id,is_vip: false, number_of_vip_tickets: 0,is_regular: true, number_of_regular_tickets:2)
 
         puts "Events attended by our second user"
 
-userEvent4 = Ticket.create(ticket_no:"MusAfri002",user_id:user3.id,event_id:event1.id)
+userEvent4 = Ticket.create(ticket_no:"MusAfri002",user_id:user3.id,event_id:event1.id, is_vip: false, number_of_vip_tickets:0, is_regular:true, number_of_regular_tickets: 2)
 
-userEvent5 = Ticket.create(ticket_no:"BusFinc002",user_id:user3.id,event_id:event3.id)
+userEvent5 = Ticket.create(ticket_no:"BusFinc002",user_id:user3.id,event_id:event3.id, is_vip: true, number_of_vip_tickets:3, is_regular: false, number_of_regular_tickets: 0)
 
-userEvents6 = Ticket.create(ticket_no:"GamCOD001",user_id:user3.id,event_id:event5.id)
+userEvents6 = Ticket.create(ticket_no:"GamCOD001",user_id:user3.id,event_id:event5.id, is_vip: true, number_of_vip_tickets: 4, is_regular:false, number_of_regular_tickets: 0)
 
     puts "Events attended by our third user"
 
-userEvent7 = Ticket.create(ticket_no:"MusAfro002",user_id:user4.id,event_id:event2.id)
+userEvent7 = Ticket.create(ticket_no:"MusAfro002",user_id:user4.id,event_id:event2.id, is_vip: true, number_of_vip_tickets: 2,is_regular: false, number_of_regular_tickets: 0)
 
-userEvent8 = Ticket.create(ticket_no:"BusGooB001",user_id:user4.id,event_id:event4.id)
+userEvent8 = Ticket.create(ticket_no:"BusGooB001",user_id:user4.id,event_id:event4.id, is_vip: false, number_of_vip_tickets: 0, is_regular: true, number_of_regular_tickets: 4)
 
-userEvent9 = Ticket.create(ticket_no:"GamChekC001",user_id:user4.id,event_id:event6.id)
+userEvent9 = Ticket.create(ticket_no:"GamChekC001",user_id:user4.id,event_id:event6.id, is_vip: true , number_of_vip_tickets: 6, is_regular: false, number_of_regular_tickets: 0)
 
 
     puts "Events the current and only organiser has created"
 
-userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id)
+userEvent13 = Ticket.create(ticket_no:"OgMusAfri",user_id:user2.id,event_id:event1.id, is_vip: false, number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-userEvent14 = Ticket.create(ticket_no:"OgMusAfr",user_id:user2.id,event_id:event2.id)
+userEvent14 = Ticket.create(ticket_no:"OgMusAfr",user_id:user2.id,event_id:event2.id,is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-userEvent15 = Ticket.create(ticket_no:"OgBusFinc",user_id:user2.id,event_id:event3.id)
+userEvent15 = Ticket.create(ticket_no:"OgBusFinc",user_id:user2.id,event_id:event3.id,is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-userEvent16 = Ticket.create(ticket_no:"OgBusGooB",user_id:user2.id,event_id:event4.id)
+userEvent16 = Ticket.create(ticket_no:"OgBusGooB",user_id:user2.id,event_id:event4.id, is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event5.id)
+userEvent17 = Ticket.create(ticket_no:"OgGamC0D",user_id:user2.id,event_id:event5.id, is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
-userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id)
+userEvent17 = Ticket.create(ticket_no:"OgGamChekC",user_id:user2.id,event_id:event6.id, is_vip: false , number_of_vip_tickets: 0, is_regular: false, number_of_regular_tickets:0)
 
 puts "End of seeding database tables"
