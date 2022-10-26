@@ -37,6 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.string "title"
     t.date "event_date"
     t.time "event_time"
+    t.string "ticket_format"
     t.date "early_booking_end_date"
     t.time "early_booking_end_time"
     t.integer "early_booking_price_regular"
@@ -58,6 +59,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_095313) do
     t.string "ticket_no"
     t.integer "user_id"
     t.integer "event_id"
+    t.boolean "is_vip"
+    t.integer "number_of_vip_tickets"
+    t.boolean "is_regular"
+    t.integer "number_of_regular_tickets"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
