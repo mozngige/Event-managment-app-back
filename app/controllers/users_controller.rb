@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
-    #skip_before_action :authorize, only: [ :create,:show]
+    # skip_before_action :authorized, only: [ :create,:show]
+
     def index
         render json: User.all,status: :ok
     end

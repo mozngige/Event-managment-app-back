@@ -21950,3 +21950,528 @@ Processing by SessionsController#destroy as */*
 Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 35)
 
 
+Started POST "/login" for 127.0.0.1 at 2022-10-28 00:01:36 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "email": "lolly@gmail.com"
+    "username": "lolly",
+    "password": "1234567",
+    "password_confirmation": "1234567",
+    "is_organiser": false
+    
+}
+Processing by SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.2ms | Allocations: 314)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-28 00:01:49 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "email": "lolly@gmail.com"
+    "username": "lolly",
+    "password": "1234567",
+    "password_confirmation": "1234567",
+    "is_organiser": false
+    
+}
+Processing by UsersController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.6ms | Allocations: 203)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-28 00:02:03 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"lolly@gmail.com", "username"=>"lolly", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"lolly@gmail.com", "username"=>"lolly", "is_organiser"=>false}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 2.1ms | Allocations: 177)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:02:26 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"lolly@gmail.com", "username"=>"lolly", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"lolly@gmail.com", "username"=>"lolly", "is_organiser"=>false}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:02:44 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"lolly@gmail.com", "username"=>"lolly", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"lolly@gmail.com", "username"=>"lolly", "is_organiser"=>false}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.39ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.8ms | ActiveRecord: 226.4ms | Allocations: 292)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:03:10 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"lolly@gmail.com", "username"=>"lolly", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"lolly@gmail.com", "username"=>"lolly", "is_organiser"=>false}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mTicket Load (3.0ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.7ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.0ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.5ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.7ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (3.0ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 4 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.9ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.7ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 5 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.7ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 6 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (197.13ms)
+Completed 200 OK in 211ms (Views: 170.4ms | ActiveRecord: 44.6ms | Allocations: 44793)
+
+
+Started GET "/items" for 127.0.0.1 at 2022-10-28 00:03:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/items"):
+  
+Started GET "/events" for 127.0.0.1 at 2022-10-28 00:03:49 +0300
+  
+ArgumentError (Before process_action callback :authorize has not been defined):
+  
+app/controllers/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/events_controller.rb:1:in `<top (required)>'
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:05:07 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"lolly@gmail.com", "username"=>"lolly", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"lolly@gmail.com", "username"=>"lolly", "is_organiser"=>false}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 1.0ms | ActiveRecord: 214.9ms | Allocations: 286)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:07:15 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"lolly@gmail.com", "username"=>"lolly", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"lolly@gmail.com", "username"=>"lolly", "is_organiser"=>false}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.9ms | ActiveRecord: 3.9ms | Allocations: 287)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-28 00:07:45 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:14:11 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authorized'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 15ms (Views: 1.3ms | ActiveRecord: 13.4ms | Allocations: 887)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:14:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authorized'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 21ms (Views: 3.7ms | ActiveRecord: 6.9ms | Allocations: 1831)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:14:56 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authorized'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.8ms | ActiveRecord: 5.4ms | Allocations: 894)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-28 00:16:30 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authorized'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.8ms | ActiveRecord: 6.3ms | Allocations: 888)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:18:23 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.1ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.7ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.0ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.7ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.2ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.0ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 4 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.9ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (2.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 5 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.2ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (3.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 6 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (248.47ms)
+Completed 200 OK in 326ms (Views: 266.3ms | ActiveRecord: 45.0ms | Allocations: 113869)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-28 00:20:17 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000055c1a80c76b8>, params: {"email"=>"jane@gmail.com", "username"=>"jane", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>false, "controller"=>"users", "action"=>"create", "user"=>{"email"=>"jane@gmail.com", "username"=>"jane", "is_organiser"=>false}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('jane@gmail.com', 'jane', '$2a$12$mYSMV/Tgus38GzJmJfaFv.q6mRDO4m/xUoJM1KeUkyWFASnDxZmvu', FALSE, '2022-10-27 21:20:18.555337', '2022-10-27 21:20:18.555337')[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (67.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 7 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mTicket Load (1.9ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (71.89ms)
+Completed 201 Created in 443ms (Views: 49.5ms | ActiveRecord: 328.9ms | Allocations: 16323)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-28 00:21:23 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "email": "jane@gmail.com",
+    // "username": "jane",
+    "password": "1234567",
+    "password_confirmation": "1234567",
+    
+    
+}
+Processing by SessionsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 141)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-10-28 00:21:56 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    
+    "username": "jane",
+    "password": "1234567",
+    "password_confirmation": "1234567",
+    
+    
+}
+Processing by SessionsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-10-28 00:22:29 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jane", "password"=>"[FILTERED]", "session"=>{"username"=>"jane", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'jane' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (0.7ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 7 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:11:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (21.86ms)
+Completed 201 Created in 311ms (Views: 21.6ms | ActiveRecord: 3.5ms | Allocations: 3891)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-28 00:22:49 +0300
+  
+ArgumentError (Before process_action callback :authorized has not been defined):
+  
+app/controllers/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/events_controller.rb:1:in `<top (required)>'
+Started POST "/logout" for 127.0.0.1 at 2022-10-28 00:23:08 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-28 00:23:16 +0300
+Processing by SessionsController#destroy as */*
+  Parameters: {"username"=>"jane", "password"=>"[FILTERED]", "session"=>{"username"=>"jane", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 35)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:23:32 +0300
+Processing by UsersController#index as */*
+  Parameters: {"username"=>"jane", "password"=>"[FILTERED]", "user"=>{"username"=>"jane"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (2.9ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.7ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.1ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.0ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 4 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.6ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (2.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 5 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.0ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.5ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.9ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 6 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.4ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 7 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.0ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (216.08ms)
+Completed 200 OK in 226ms (Views: 192.5ms | ActiveRecord: 32.6ms | Allocations: 37254)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-28 00:24:26 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"amani@gmail.com", "username"=>"amani", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>true, "user"=>{"email"=>"amani@gmail.com", "username"=>"amani", "is_organiser"=>true}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.2ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (2.1ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.5ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.9ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.3ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 4 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.3ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (2.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 5 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (2.0ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (0.9ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 6 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUserProfile Load (1.6ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 7 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (2.2ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 7[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (162.43ms)
+Completed 200 OK in 172ms (Views: 143.1ms | ActiveRecord: 27.6ms | Allocations: 30452)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-28 00:24:33 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"amani@gmail.com", "username"=>"amani", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>true, "user"=>{"email"=>"amani@gmail.com", "username"=>"amani", "is_organiser"=>true}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fa7187c6020>, params: {"email"=>"amani@gmail.com", "username"=>"amani", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_organiser"=>true, "controller"=>"users", "action"=>"create", "user"=>{"email"=>"amani@gmail.com", "username"=>"amani", "is_organiser"=>true}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`email`, `username`, `password_digest`, `is_organiser`, `created_at`, `updated_at`) VALUES ('amani@gmail.com', 'amani', '$2a$12$5RGrhhaBbvJ16hYcXeeTXe22fcp2sxzOj7j.hu7diUjQLmozRfCzS', TRUE, '2022-10-27 21:24:33.439018', '2022-10-27 21:24:33.439018')[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (337.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (1.3ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 8 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mTicket Load (0.7ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 8[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 8[0m
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.47ms)
+Completed 201 Created in 643ms (Views: 11.5ms | ActiveRecord: 341.2ms | Allocations: 5198)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-28 00:25:45 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    
+    "username": "amani",
+    "password": "1234567",
+    
+    
+    
+    
+}
+Processing by SessionsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-10-28 00:25:54 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"amani", "password"=>"[FILTERED]", "session"=>{"username"=>"amani", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'amani' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+[active_model_serializers]   [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 8 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mTicket Load (1.8ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`user_id` = 8[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events` INNER JOIN `tickets` ON `events`.`id` = `tickets`.`event_id` WHERE `tickets`.`user_id` = 8[0m
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:11:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.75ms)
+Completed 201 Created in 295ms (Views: 12.5ms | ActiveRecord: 4.2ms | Allocations: 3744)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-28 00:26:07 +0300
+  
+ArgumentError (Before process_action callback :authorized has not been defined):
+  
+app/controllers/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/events_controller.rb:1:in `<top (required)>'
+Started GET "/events" for 127.0.0.1 at 2022-10-28 00:26:36 +0300
+Processing by EventsController#index as */*
+  Parameters: {"username"=>"amani", "password"=>"[FILTERED]", "event"=>{}}
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `tickets` ON `users`.`id` = `tickets`.`user_id` WHERE `tickets`.`event_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.1ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`event_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `tickets` ON `users`.`id` = `tickets`.`user_id` WHERE `tickets`.`event_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (1.4ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`event_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `tickets` ON `users`.`id` = `tickets`.`user_id` WHERE `tickets`.`event_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (2.4ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`event_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `tickets` ON `users`.`id` = `tickets`.`user_id` WHERE `tickets`.`event_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`event_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `tickets` ON `users`.`id` = `tickets`.`user_id` WHERE `tickets`.`event_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`event_id` = 5[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `tickets` ON `users`.`id` = `tickets`.`user_id` WHERE `tickets`.`event_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mTicket Load (2.0ms)[0m  [1m[34mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`event_id` = 6[0m
+[active_model_serializers]   ↳ app/controllers/events_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (204.02ms)
+Completed 200 OK in 222ms (Views: 181.8ms | ActiveRecord: 47.4ms | Allocations: 44135)
+
+

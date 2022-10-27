@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+	# skip_before_action :authorized, only: :create
+
     def create
         # This line shall find a user in the users table if they tender a valid username
         user = User.find_by(username: params[:username])

@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+    skip_before_action :authorized, only: [:index]
 rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
 
     def index 
