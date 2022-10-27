@@ -8490,3 +8490,1783 @@ Processing by Organizer::SessionsController#destroy as */*
 Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 2.7ms | Allocations: 1712)
 
 
+Started GET "/events" for 127.0.0.1 at 2022-10-26 09:11:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (3.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 82ms (Views: 25.9ms | ActiveRecord: 19.7ms | Allocations: 21417)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 09:17:26 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com", "registration"=>{"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00005638a6c1d9e8>, params: {"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'lucky@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (7.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('lucky@gmail.com', '$2a$12$oC4Ltdng6y3nZ/IPWVEo1.P4wKeqG6PfR3qqLRBDY6LPljGJg1BTm', NULL, NULL, NULL, '2022-10-26 06:17:27.062603', '2022-10-26 06:17:27.062603')[0m
+  [1m[36mTRANSACTION (48.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 440ms (Views: 3.7ms | ActiveRecord: 68.8ms | Allocations: 21421)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 09:18:25 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com", "registration"=>{"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f4fc892e180>, params: {"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"lucky", "password"=>"[FILTERED]", "email"=>"lucky@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'lucky@gmail.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 2872ms (Views: 4.5ms | ActiveRecord: 3.0ms | Allocations: 700415)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 09:19:12 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"jessie", "password"=>"[FILTERED]", "email"=>"jessie@gmail.com", "registration"=>{"username"=>"jessie", "password"=>"[FILTERED]", "email"=>"jessie@gmail.com"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f4fb0022f40>, params: {"username"=>"jessie", "password"=>"[FILTERED]", "email"=>"jessie@gmail.com", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"jessie", "password"=>"[FILTERED]", "email"=>"jessie@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jessie@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('jessie@gmail.com', '$2a$12$3U7DNHK//7SDtgWnQoocPuuXXFcdKouzYvNulaD.5X0dBRiFlYlVC', NULL, NULL, NULL, '2022-10-26 06:19:13.113723', '2022-10-26 06:19:13.113723')[0m
+  [1m[36mTRANSACTION (253.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 571ms (Views: 3.9ms | ActiveRecord: 255.3ms | Allocations: 4685)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 09:23:18 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f4fb937b788>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jessie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f4fb937b788>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.47ms)
+Completed 200 OK in 318ms (Views: 3.9ms | ActiveRecord: 2.4ms | Allocations: 2239)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 09:23:20 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.4ms | Allocations: 1387)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 09:30:21 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com", "registration"=>{"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f4fb91cfc90>, params: {"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'hay@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('hay@gmail.com', '$2a$12$9gDZm39.KyG8PHCxheNx5eGSb0C/0TPDsLDwEdp2vBI474GKr/lF.', NULL, NULL, NULL, '2022-10-26 06:30:21.846442', '2022-10-26 06:30:21.846442')[0m
+  [1m[36mTRANSACTION (47.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 380ms (Views: 2.0ms | ActiveRecord: 51.6ms | Allocations: 4778)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 09:30:24 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com", "registration"=>{"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f4fa809ac78>, params: {"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"Simon", "password"=>"[FILTERED]", "email"=>"hay@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'hay@gmail.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.56ms)
+Completed 422 Unprocessable Entity in 308ms (Views: 5.8ms | ActiveRecord: 4.2ms | Allocations: 4208)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:00:38 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f4fb9051648>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jessie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f4fb9051648>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:00:38 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 1.5ms | Allocations: 1503)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.44ms)
+Completed 200 OK in 348ms (Views: 3.0ms | ActiveRecord: 8.2ms | Allocations: 5021)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:04:05 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 49ms (Views: 9.3ms | ActiveRecord: 24.3ms | Allocations: 4851)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:04:33 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f4fbc411690>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jessie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f4fbc411690>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:04:34 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.0ms | Allocations: 1387)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.71ms)
+Completed 200 OK in 374ms (Views: 5.2ms | ActiveRecord: 20.1ms | Allocations: 7269)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:05:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000056169a2005b0>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jessie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000056169a2005b0>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.36ms)
+Completed 200 OK in 451ms (Views: 13.5ms | ActiveRecord: 22.0ms | Allocations: 35618)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:05:22 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 200 OK in 49ms (Views: 30.5ms | ActiveRecord: 1.6ms | Allocations: 6551)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:16:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 71ms (Views: 26.9ms | ActiveRecord: 12.7ms | Allocations: 21418)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:16:35 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f5838c546c0>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jessie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f5838c546c0>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:16:35 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 2.3ms | Allocations: 1517)
+
+
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 4.6ms | Allocations: 22733)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::SessionsController:0x000000000206c0>):
+  
+app/controllers/users/sessions_controller.rb:22:in `create'
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:19:13 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.3ms | Allocations: 1386)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:19:38 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f58387da608>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jessie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f58387da608>, params: {"email"=>"jessie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"jessie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 1.3ms | Allocations: 3304)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::SessionsController:0x000000000207d8>):
+  
+app/controllers/users/sessions_controller.rb:22:in `create'
+Started POST "/users/login" for ::1 at 2022-10-26 11:19:40 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055d720bef080>, params: {"email"=>"", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 1.3ms | Allocations: 1722)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-26 11:23:54 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"kim@gmail.com", "username"=>"kim", "password"=>"[FILTERED]", "is_organiser"=>"true", "user"=>{"email"=>"kim@gmail.com"}}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-26 11:24:30 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"kim@gmail.com", "username"=>"kim", "password"=>"[FILTERED]", "is_organiser"=>"true", "user"=>{"email"=>"kim@gmail.com"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+No serializer found for resource: #<User id: 1, email: "alvin@gmail.com", created_at: "2022-10-25 20:47:02.529523000 +0000", updated_at: "2022-10-25 20:47:02.529523000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (3.58ms)
+Completed 200 OK in 149ms (Views: 31.2ms | ActiveRecord: 126.1ms | Allocations: 4668)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-26 11:25:23 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f5818015b68>, params: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kim@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 15ms (Views: 3.8ms | ActiveRecord: 2.7ms | Allocations: 1886)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-26 11:25:42 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f582c018a98>, params: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (5.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kim@gmail.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 422 Unprocessable Entity in 346ms (Views: 4.7ms | ActiveRecord: 9.5ms | Allocations: 4782)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-26 11:25:53 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f5820057218>, params: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kim@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (4.7ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('kim@gmail.com', '$2a$12$k8/h3B9yR3WdYGxxQ1v1lOWoaRxS8CVvmfFK3Es9oCpQ6WRA65I8C', NULL, NULL, NULL, '2022-10-26 08:25:53.593707', '2022-10-26 08:25:53.593707')[0m
+  [1m[36mTRANSACTION (72.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 456ms (Views: 2.4ms | ActiveRecord: 80.5ms | Allocations: 4848)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-26 11:26:02 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f5829ce20d8>, params: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kim@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f5829ce20d8>, params: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}} }[0m
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 1.2ms | Allocations: 3308)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::SessionsController:0x00000000025c38>):
+  
+app/controllers/users/sessions_controller.rb:22:in `create'
+Started POST "/users/login" for 127.0.0.1 at 2022-10-26 11:26:18 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f58243141f0>, params: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kim@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f58243141f0>, params: {"email"=>"kim@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"kim@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:23:in `create'
+  [1m[36mUser Load (205.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.6ms)
+Completed 200 OK in 570ms (Views: 6.0ms | ActiveRecord: 226.6ms | Allocations: 5508)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 11:27:04 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"abzed", "password"=>"[FILTERED]", "email"=>"abzed@gmail.com", "registration"=>{"username"=>"abzed", "password"=>"[FILTERED]", "email"=>"abzed@gmail.com"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f58200e94d8>, params: {"username"=>"abzed", "password"=>"[FILTERED]", "email"=>"abzed@gmail.com", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"abzed", "password"=>"[FILTERED]", "email"=>"abzed@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'abzed@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('abzed@gmail.com', '$2a$12$e2Bd9Dm4KN3eS4bsZDA4ee6ucyhkrYxSg43Sr3G3vyHEnL8kryrwy', NULL, NULL, NULL, '2022-10-26 08:27:05.261536', '2022-10-26 08:27:05.261536')[0m
+  [1m[36mTRANSACTION (48.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 403ms (Views: 2.7ms | ActiveRecord: 51.9ms | Allocations: 5133)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:27:22 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f581809dd88>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f581809dd88>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.43ms)
+Completed 200 OK in 330ms (Views: 2.5ms | ActiveRecord: 1.3ms | Allocations: 1531)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:30:10 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f582c0d15c0>, params: {"email"=>"", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 4.2ms | Allocations: 1395)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:30:41 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f5828cd0370>, params: {"email"=>"", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 2.7ms | Allocations: 1352)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-26 11:35:53 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"joe", "email"=>"joe@gmail.com", "password"=>"[FILTERED]", "registration"=>{"username"=>"joe", "email"=>"joe@gmail.com", "password"=>"[FILTERED]"}}
+Completed 200 OK in 247ms (Views: 0.2ms | ActiveRecord: 7.7ms | Allocations: 3340)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-26 11:36:15 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"joe@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"joe@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f582446fae0>, params: {"email"=>"joe@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"joe@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'joe@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 1.7ms | Allocations: 1888)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-26 11:36:32 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f58180e90a8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f58180e90a8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:23:in `create'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.44ms)
+Completed 200 OK in 325ms (Views: 4.0ms | ActiveRecord: 5.4ms | Allocations: 2647)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:36:51 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f582c1255f8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f582c1255f8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.39ms)
+Completed 200 OK in 318ms (Views: 2.4ms | ActiveRecord: 1.1ms | Allocations: 1530)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 11:47:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (3.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 99ms (Views: 32.5ms | ActiveRecord: 14.5ms | Allocations: 21417)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 11:50:58 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f00840d398>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f00840d398>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.63ms)
+Completed 200 OK in 400ms (Views: 17.0ms | ActiveRecord: 13.8ms | Allocations: 18459)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 12:03:04 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"judy", "password"=>"[FILTERED]", "email"=>"judy@gmail.com", "registration"=>{"username"=>"judy", "password"=>"[FILTERED]", "email"=>"judy@gmail.com"}}
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 2.1ms | Allocations: 1245)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:03:51 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"judy@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"judy@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed787eb310>, params: {"email"=>"judy@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"judy@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'judy@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 1.5ms | Allocations: 1399)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:04:35 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"judy@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"judy@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed787d8288>, params: {"email"=>"judy@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"judy@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'judy@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 2.2ms | Allocations: 1353)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 12:04:36 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.7ms | Allocations: 1402)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:05:37 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed787951b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed787951b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.5ms)
+Completed 200 OK in 304ms (Views: 3.3ms | ActiveRecord: 1.7ms | Allocations: 1545)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:06:30 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed7876faa8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed7876faa8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.77ms)
+Completed 200 OK in 329ms (Views: 7.0ms | ActiveRecord: 1.9ms | Allocations: 1533)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:10:10 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed785de5b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed785de5b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.48ms)
+Completed 200 OK in 306ms (Views: 3.0ms | ActiveRecord: 4.7ms | Allocations: 1529)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:10:19 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed7848fa40>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed7848fa40>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.35ms)
+Completed 200 OK in 304ms (Views: 6.4ms | ActiveRecord: 2.6ms | Allocations: 1529)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:28:14 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007c4f6d8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007c4f6d8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.36ms)
+Completed 200 OK in 309ms (Views: 2.5ms | ActiveRecord: 1.8ms | Allocations: 1647)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 12:28:20 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.7ms | Allocations: 1387)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 12:28:47 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 1.0ms | Allocations: 1389)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 12:45:17 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f006c83b28>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f006c83b28>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.53ms)
+Completed 200 OK in 327ms (Views: 4.6ms | ActiveRecord: 2.2ms | Allocations: 1644)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 12:45:19 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 2.8ms | Allocations: 1387)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 12:52:31 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"eliud", "password"=>"[FILTERED]", "email"=>"eliud@gmail.com", "registration"=>{"username"=>"eliud", "password"=>"[FILTERED]", "email"=>"eliud@gmail.com"}}
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 492)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 12:55:26 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"eliud", "password"=>"[FILTERED]", "email"=>"eliud@gmail.com", "registration"=>{"username"=>"eliud", "password"=>"[FILTERED]", "email"=>"eliud@gmail.com"}}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 372)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-26 13:00:00 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"brooks", "password"=>"[FILTERED]", "email"=>"brooks@gmail.com", "registration"=>{"username"=>"brooks", "password"=>"[FILTERED]", "email"=>"brooks@gmail.com"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 376)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 13:00:22 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"brooks@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"brooks@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78cb8a78>, params: {"email"=>"brooks@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"brooks@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'brooks@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 15ms (Views: 4.9ms | ActiveRecord: 1.7ms | Allocations: 1354)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 13:00:23 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.5ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:17:00 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78a6f438>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78a6f438>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.65ms)
+Completed 200 OK in 348ms (Views: 3.7ms | ActiveRecord: 22.4ms | Allocations: 1644)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:17:01 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.5ms | Allocations: 1389)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:26:50 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 15ms (Views: 15.2ms | ActiveRecord: 2.5ms | Allocations: 1502)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:28:09 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 2.2ms | Allocations: 1387)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:28:20 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.6ms | Allocations: 1387)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:29:15 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 2.2ms | Allocations: 1387)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:29:15 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.3ms | Allocations: 1387)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:30:23 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.1ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:30:55 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed787b6250>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed787b6250>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.43ms)
+Completed 200 OK in 327ms (Views: 4.5ms | ActiveRecord: 10.4ms | Allocations: 1540)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:30:55 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 2.5ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:32:23 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78776c68>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78776c68>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.5ms)
+Completed 200 OK in 296ms (Views: 5.0ms | ActiveRecord: 1.6ms | Allocations: 1529)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:32:23 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 2.1ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:33:48 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78510410>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78510410>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 311ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 1529)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:36:15 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007da2df0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007da2df0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 200 OK in 306ms (Views: 2.5ms | ActiveRecord: 1.3ms | Allocations: 1530)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:38:16 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007c8b3b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007c8b3b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.48ms)
+Completed 200 OK in 312ms (Views: 3.9ms | ActiveRecord: 1.5ms | Allocations: 1529)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:39:25 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007a3f3c0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f007a3f3c0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.41ms)
+Completed 200 OK in 301ms (Views: 6.7ms | ActiveRecord: 5.0ms | Allocations: 1532)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:39:26 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.4ms | Allocations: 1387)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 14:40:52 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 14:44:19 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f0066829b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055f0066829b8>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.41ms)
+Completed 200 OK in 521ms (Views: 2.2ms | ActiveRecord: 1.3ms | Allocations: 1532)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 15:00:27 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78de5a18>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78de5a18>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 308ms (Views: 2.3ms | ActiveRecord: 1.6ms | Allocations: 1647)
+
+
+Started POST "/users/login" for ::1 at 2022-10-26 15:04:24 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78d31e78>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fed78d31e78>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.77ms)
+Completed 200 OK in 311ms (Views: 6.1ms | ActiveRecord: 2.7ms | Allocations: 1530)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-26 15:04:25 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 2.1ms | Allocations: 1390)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:07:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (3.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 111ms (Views: 30.5ms | ActiveRecord: 10.2ms | Allocations: 21418)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:08:54 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88cac1a0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88cac1a0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.36ms)
+Completed 200 OK in 388ms (Views: 15.8ms | ActiveRecord: 10.7ms | Allocations: 18460)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:08:55 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.0ms | Allocations: 1402)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:18:39 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 15.6ms | Allocations: 1502)
+
+
+Started DELETE "/users/logout" for ::1 at 2022-10-27 08:24:05 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 2.6ms | ActiveRecord: 1.0ms | Allocations: 1488)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:24:05 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 1.3ms | Allocations: 1387)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:24:49 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:25:38 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a8882b5e0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a8882b5e0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 200 OK in 298ms (Views: 3.1ms | ActiveRecord: 1.5ms | Allocations: 1530)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:26:28 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a887f6138>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a887f6138>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.52ms)
+Completed 200 OK in 318ms (Views: 6.3ms | ActiveRecord: 1.5ms | Allocations: 1531)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:26:29 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 1402)
+
+
+Started DELETE "/users/logout" for ::1 at 2022-10-27 08:26:41 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1307)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:26:41 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 2.7ms | Allocations: 1389)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-27 08:27:52 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"kimmie", "password"=>"[FILTERED]", "email"=>"kimmie@gmail.com", "registration"=>{"username"=>"kimmie", "password"=>"[FILTERED]", "email"=>"kimmie@gmail.com"}}
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1118)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:28:14 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"kimmie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kimmie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x0000559721bbe140>, params: {"email"=>"kimmie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"kimmie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kimmie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 1.4ms | Allocations: 1354)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:28:16 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.7ms | Allocations: 1387)
+
+
+Started DELETE "/users/logout" for ::1 at 2022-10-27 08:28:35 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1308)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:28:35 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 262ms (Views: 258.1ms | ActiveRecord: 1.3ms | Allocations: 1399)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:29:56 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.6ms | Allocations: 1387)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-27 08:30:35 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"barbie", "password"=>"[FILTERED]", "email"=>"barbie@gmail.com", "registration"=>{"username"=>"barbie", "password"=>"[FILTERED]", "email"=>"barbie@gmail.com"}}
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 372)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:32:47 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"barbie@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"barbie@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x000055971fe1f080>, params: {"email"=>"barbie@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"barbie@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'barbie@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 3.6ms | Allocations: 1354)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:32:48 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.8ms | Allocations: 1387)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-27 08:34:07 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"rob", "password"=>"[FILTERED]", "email"=>"rob@gmail.com", "registration"=>{"username"=>"rob", "password"=>"[FILTERED]", "email"=>"rob@gmail.com"}}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 377)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:34:32 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"rob@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"rob@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88ee4580>, params: {"email"=>"rob@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"rob@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'rob@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 14ms (Views: 4.5ms | ActiveRecord: 3.2ms | Allocations: 1355)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 08:34:32 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.7ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:35:14 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88dc8750>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88dc8750>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88dc8750>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 422 Unprocessable Entity in 592ms (Views: 4.6ms | ActiveRecord: 4.2ms | Allocations: 1650)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:35:24 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88d45aa8>, params: {"email"=>"", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 1.2ms | Allocations: 1352)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-27 08:36:04 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"kim@gmail.com", "username"=>"kim", "password"=>"[FILTERED]", "is_organiser"=>"true", "user"=>{"email"=>"kim@gmail.com"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+No serializer found for resource: #<User id: 1, email: "alvin@gmail.com", created_at: "2022-10-25 20:47:02.529523000 +0000", updated_at: "2022-10-25 20:47:02.529523000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.96ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 1.2ms | Allocations: 2979)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-27 08:37:37 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+    "username": "bobby"
+    "email": "bobby@gmail.com",
+    "password": "1234567"
+  }
+Processing by Users::RegistrationsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 143)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+actionpack (7.0.4) lib/action_dispatch/http/parameters.rb:96:in `rescue in parse_formatted_parameters'
+actionpack (7.0.4) lib/action_dispatch/http/parameters.rb:92:in `parse_formatted_parameters'
+actionpack (7.0.4) lib/action_dispatch/http/request.rb:390:in `block in POST'
+rack (2.2.4) lib/rack/request.rb:69:in `fetch'
+rack (2.2.4) lib/rack/request.rb:69:in `fetch_header'
+actionpack (7.0.4) lib/action_dispatch/http/request.rb:389:in `POST'
+actionpack (7.0.4) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (7.0.4) lib/action_controller/metal/strong_parameters.rb:1232:in `params'
+devise (4.8.1) lib/devise/controllers/helpers.rb:159:in `devise_parameter_sanitizer'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:137:in `sign_up_params'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:17:in `create'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:107:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-27 08:38:36 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"bobby", "email"=>"bobby@gmail.com", "password"=>"[FILTERED]", "registration"=>{"username"=>"bobby", "email"=>"bobby@gmail.com", "password"=>"[FILTERED]"}}
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 376)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-27 08:39:04 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"bobby@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"bobby@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x0000559721e99f40>, params: {"email"=>"bobby@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"bobby@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'bobby@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 1.9ms | Allocations: 1353)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:45:16 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a888b1e10>, params: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'alvin@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a888b1e10>, params: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a888b1e10>, params: {"email"=>"alvin@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"alvin@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 590ms (Views: 3.9ms | ActiveRecord: 1.8ms | Allocations: 1765)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 08:45:36 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88853860>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88853860>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88853860>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 577ms (Views: 2.4ms | ActiveRecord: 1.3ms | Allocations: 1649)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 10:07:34 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x0000559721c885a8>, params: {"email"=>"", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 19ms (Views: 3.8ms | ActiveRecord: 4.8ms | Allocations: 1468)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-10-27 10:12:54 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"bobby@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"bobby@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7a885e9278>, params: {"email"=>"bobby@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"email"=>"bobby@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'bobby@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (41.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('bobby@gmail.com', '$2a$12$kw77DK1Vx7MkrCxxvjlw0u3A8.2rHMRI7N7OGvl5gBt6dgYBA66lq', NULL, NULL, NULL, '2022-10-27 07:12:54.585627', '2022-10-27 07:12:54.585627')[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (54.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.49ms)
+Completed 201 Created in 460ms (Views: 8.0ms | ActiveRecord: 105.0ms | Allocations: 4008)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-27 10:13:39 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"ronny", "email"=>"ronny@gmail.com", "password"=>"[FILTERED]", "registration"=>{"username"=>"ronny", "email"=>"ronny@gmail.com", "password"=>"[FILTERED]"}}
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 372)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-27 10:13:58 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"ronny@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ronny@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x0000559721922d78>, params: {"email"=>"ronny@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"ronny@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ronny@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 2.0ms | Allocations: 1354)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-27 10:41:41 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"ronny@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ronny@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f7a88cc7f90>, params: {"email"=>"ronny@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"ronny@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ronny@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 19ms (Views: 3.4ms | ActiveRecord: 4.3ms | Allocations: 2183)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-27 12:01:01 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"ronny@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ronny@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd54c9cde60>, params: {"email"=>"ronny@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"ronny@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ronny@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 200 OK in 95ms (Views: 13.2ms | ActiveRecord: 13.7ms | Allocations: 18945)
+
+
+Started GET "/organizers" for 127.0.0.1 at 2022-10-27 13:19:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by OrganizersController#index as */*
+  Parameters: {"email"=>"Lee1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "organizer"=>{"email"=>"Lee1@gmail.com"}}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 35.2ms | Allocations: 934)
+
+
+Started GET "/organizers" for 127.0.0.1 at 2022-10-27 13:20:03 +0300
+Processing by OrganizersController#index as */*
+  Parameters: {"email"=>"Lee1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "organizer"=>{"email"=>"Lee1@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mOrganizer Load (2.4ms)[0m  [1m[34mSELECT `organizers`.* FROM `organizers`[0m
+  ↳ app/controllers/organizers_controller.rb:6:in `index'
+No serializer found for resource: #<Organizer id: 1, email: "alvin1@gmail.com", created_at: "2022-10-25 21:21:47.015866000 +0000", updated_at: "2022-10-25 21:21:47.015866000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Organizer::ActiveRecord_Relation (0.76ms)
+Completed 200 OK in 122ms (Views: 80.0ms | ActiveRecord: 27.5ms | Allocations: 38324)
+
+
+Started GET "/organizers/signup" for 127.0.0.1 at 2022-10-27 13:21:00 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for OrganizersController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-27 13:21:14 +0300
+Processing by Organizer::RegistrationsController#create as */*
+  Parameters: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Organizer::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fc27001d1c0>, params: {"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"organizer/registrations", "action"=>"create", "registration"=>{"email"=>"alvin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM `organizers` WHERE `organizers`.`email` = BINARY 'alvin1@gmail.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 422 Unprocessable Entity in 345ms (Views: 6.8ms | ActiveRecord: 6.3ms | Allocations: 5309)
+
+
+Started POST "/organizers/signup" for 127.0.0.1 at 2022-10-27 13:21:39 +0300
+Processing by Organizer::RegistrationsController#create as */*
+  Parameters: {"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Organizer::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fc26801a6d0>, params: {"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"organizer/registrations", "action"=>"create", "registration"=>{"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM `organizers` WHERE `organizers`.`email` = BINARY 'ben@gmail.com' LIMIT 1[0m
+  [1m[36mOrganizer Create (1.0ms)[0m  [1m[32mINSERT INTO `organizers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `failed_attempts`, `unlock_token`, `locked_at`, `created_at`, `updated_at`) VALUES ('ben@gmail.com', '$2a$12$vlEyGRuSU/BOKzWyK7BlGOPLwp6xRZjjOusDkKBDT5seBM1ru7Z8.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, '2022-10-27 10:21:39.390550', '2022-10-27 10:21:39.390550')[0m
+  [1m[36mTRANSACTION (84.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 442ms (Views: 3.9ms | ActiveRecord: 90.6ms | Allocations: 5018)
+
+
+Started POST "/organizers/login" for 127.0.0.1 at 2022-10-27 13:21:59 +0300
+Processing by Organizer::SessionsController#create as */*
+  Parameters: {"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_confirmation, :session. Context: { controller: Organizer::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc27d838c58>, params: {"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"organizer/sessions", "action"=>"create", "session"=>{"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mOrganizer Load (1.2ms)[0m  [1m[34mSELECT `organizers`.* FROM `organizers` WHERE `organizers`.`email` = 'ben@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/organizer/sessions_controller.rb:6:in `create'
+[31mUnpermitted parameters: :password_confirmation, :session. Context: { controller: Organizer::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc27d838c58>, params: {"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"organizer/sessions", "action"=>"create", "session"=>{"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Organizer (0.51ms)
+Completed 200 OK in 323ms (Views: 3.5ms | ActiveRecord: 1.6ms | Allocations: 2213)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-10-27 13:22:35 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"ben@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"ben@gmail.com"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+No serializer found for resource: #<User id: 1, email: "alvin@gmail.com", created_at: "2022-10-25 20:47:02.529523000 +0000", updated_at: "2022-10-25 20:47:02.529523000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.43ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 5.0ms | Allocations: 4672)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-27 13:24:02 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc27815a8f0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc27815a8f0>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:23:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.61ms)
+Completed 200 OK in 390ms (Views: 8.6ms | ActiveRecord: 13.9ms | Allocations: 2986)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2022-10-27 13:26:04 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"koko", "email"=>"koko@gmail.com", "password"=>"[FILTERED]", "registration"=>{"username"=>"koko", "email"=>"koko@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fc2700e9a18>, params: {"username"=>"koko", "email"=>"koko@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"koko", "email"=>"koko@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'koko@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('koko@gmail.com', '$2a$12$NmHFFZksgL2v7Z1/m4N85eZR7K1ppzfReHTNumTGdAfWjWiC0nvJi', NULL, NULL, NULL, '2022-10-27 10:26:04.437385', '2022-10-27 10:26:04.437385')[0m
+  [1m[36mTRANSACTION (48.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 404ms (Views: 4.1ms | ActiveRecord: 58.0ms | Allocations: 5869)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2022-10-27 13:26:26 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc2680bc548>, params: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'koko@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc2680bc548>, params: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 15 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:23:in `create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.4ms)
+Completed 200 OK in 349ms (Views: 4.7ms | ActiveRecord: 3.6ms | Allocations: 2151)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 13:49:38 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 108ms (Views: 28.8ms | ActiveRecord: 4.8ms | Allocations: 6183)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 13:50:06 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 3.3ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 13:51:02 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc268127730>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc268127730>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.57ms)
+Completed 200 OK in 334ms (Views: 4.1ms | ActiveRecord: 8.1ms | Allocations: 1532)
+
+
+Started POST "/users/signup" for ::1 at 2022-10-27 13:51:54 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"username"=>"molly", "password"=>"[FILTERED]", "email"=>"molly@gmail.com", "registration"=>{"username"=>"molly", "password"=>"[FILTERED]", "email"=>"molly@gmail.com"}}
+[31mUnpermitted parameters: :username, :registration. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fc27d2e6570>, params: {"username"=>"molly", "password"=>"[FILTERED]", "email"=>"molly@gmail.com", "controller"=>"users/registrations", "action"=>"create", "registration"=>{"username"=>"molly", "password"=>"[FILTERED]", "email"=>"molly@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (15.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'molly@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (24.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('molly@gmail.com', '$2a$12$4sMdcAWdM1j2e9Y6ddKU7OQI9FVw2ilHEUa/dmRHuAk5eRbvn270W', NULL, NULL, NULL, '2022-10-27 10:51:54.769977', '2022-10-27 10:51:54.769977')[0m
+  [1m[36mTRANSACTION (121.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 200 OK in 496ms (Views: 2.4ms | ActiveRecord: 166.0ms | Allocations: 4670)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 13:52:42 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"molly@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"molly@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc274422b40>, params: {"email"=>"molly@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"molly@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'molly@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc274422b40>, params: {"email"=>"molly@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"molly@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.49ms)
+Completed 200 OK in 310ms (Views: 2.9ms | ActiveRecord: 3.0ms | Allocations: 1530)
+
+
+Started DELETE "/users/logout" for ::1 at 2022-10-27 13:52:58 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 3.3ms | ActiveRecord: 0.6ms | Allocations: 1355)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-27 13:52:58 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.4ms | Allocations: 1387)
+
+
+Started POST "/users/login" for ::1 at 2022-10-27 15:52:04 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc270202738>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abzed@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users/sessions_controller.rb:19:in `create'
+[31mUnpermitted parameter: :session. Context: { controller: Users::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fc270202738>, params: {"email"=>"abzed@gmail.com", "password"=>"[FILTERED]", "controller"=>"users/sessions", "action"=>"create", "session"=>{"email"=>"abzed@gmail.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (5.28ms)
+Completed 200 OK in 472ms (Views: 21.7ms | ActiveRecord: 20.4ms | Allocations: 1644)
+
+
+Started GET "/events" for ::1 at 2022-10-27 18:18:19 +0300
+Started GET "/home_banners" for ::1 at 2022-10-27 18:18:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+Processing by EventsController#index as */*
+Started GET "/home_banners" for ::1 at 2022-10-27 18:18:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (8.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 146ms (Views: 143.7ms | ActiveRecord: 39.2ms | Allocations: 6627)
+
+
+Started GET "/events" for ::1 at 2022-10-27 18:18:20 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.67ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 2.0ms | Allocations: 1387)
+
+
+Started GET "/home_banners" for ::1 at 2022-10-27 18:19:00 +0300
+Started GET "/events" for ::1 at 2022-10-27 18:19:00 +0300
+Processing by EventsController#index as */*
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Started GET "/home_banners" for ::1 at 2022-10-27 18:19:00 +0300
+  [1m[36mEvent Load (6.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 57ms (Views: 48.2ms | ActiveRecord: 7.9ms | Allocations: 5982)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+Started GET "/events" for ::1 at 2022-10-27 18:19:00 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 1.5ms | Allocations: 1386)
+
+
+Started GET "/home_banners" for ::1 at 2022-10-27 18:19:40 +0300
+Started GET "/events" for ::1 at 2022-10-27 18:19:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+Processing by EventsController#index as */*
+Started GET "/home_banners" for ::1 at 2022-10-27 18:19:40 +0300
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (3.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 170ms (Views: 163.9ms | ActiveRecord: 4.9ms | Allocations: 6020)
+
+
+Started GET "/events" for ::1 at 2022-10-27 18:19:41 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 2.0ms | Allocations: 1387)
+
+
+Started GET "/home_banners" for ::1 at 2022-10-27 18:20:33 +0300
+Started GET "/events" for ::1 at 2022-10-27 18:20:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+Started GET "/home_banners" for ::1 at 2022-10-27 18:20:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home_banners"):
+  
+Processing by EventsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 108ms (Views: 27.8ms | ActiveRecord: 14.8ms | Allocations: 21426)
+
+
+Started GET "/events" for ::1 at 2022-10-27 18:20:34 +0300
+Processing by EventsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/controllers/events_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 1.9ms | Allocations: 1387)
+
+

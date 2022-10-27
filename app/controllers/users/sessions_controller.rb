@@ -18,6 +18,8 @@ class Users::SessionsController < Devise::SessionsController
  def create
    @user = User.find_by_email(user_params[:email])
    if @user && @user.valid_password?(user_params[:password])
+    session[:user_id] = @user.id 
+    # flash[:notice] = "You have successfully logged in."
      sign_in :user, @user
      render json: @user
    elsif @user && not(@user.valid_password?(user_params[:password]))

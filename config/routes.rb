@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   }
 
   resources :users, only: [:index, :create, :show]
+  resources :organizers, only: [:index, :create, :show]
+
   resources :communities, only: [:index, :create, :show]
   resources :abouts
   resources :user_events
