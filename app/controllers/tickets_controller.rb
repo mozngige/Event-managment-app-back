@@ -4,9 +4,22 @@ class TicketsController < ApplicationController
     end
 
     def create
-        ticket = Ticket.create!(ticket_params)
-        render json: ticket,status: :created
+        if params.present?
+            phone = PhonyRails.normalize_number(params[:phone_number],country_code: "KE").gsub(/\W/, "")
+            ticket = Ticket.new(ticket_params)
+            
+            if ticket.save
+                render json:{ success: "payment was created, check mobile device"},status: :created
+
+            else
+                
+            render json: {error: "unsuccessful purchase,the payment failed"}
+
+            end
+        else
+        render json: {error: "Invalid inputs"}
     end
+end
 
     def update
         ticket = find_ticket
@@ -27,7 +40,7 @@ class TicketsController < ApplicationController
     end
 
     def ticket_params
-        params.permit(:ticket_no, :user_id, :event_id, :is_vip, :number_of_vip_tickets, :is_regular, :number_of_regular_tickets)
+        params.permit(:ticket_no, :user_id, :event_id, :is_vip, :number_of_vip_tickets, :is_regular, :number_of_regular_tickets, :amount, :phone_number)
     end
 
     def ticket_updateparams

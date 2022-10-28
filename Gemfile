@@ -14,6 +14,8 @@ gem "puma", "~> 5.0"
 
 gem "bcrypt"
 
+gem "phony_rails"
+
 gem "active_model_serializers"
 
 gem "jwt"

@@ -70,6 +70,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_111518) do
     t.integer "number_of_vip_tickets"
     t.boolean "is_regular"
     t.integer "number_of_regular_tickets"
+    t.integer "amount"
+    t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

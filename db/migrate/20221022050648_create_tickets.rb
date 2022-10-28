@@ -8,6 +8,8 @@ class CreateTickets < ActiveRecord::Migration[7.0]
       t.integer :number_of_vip_tickets
       t.boolean :is_regular
       t.integer :number_of_regular_tickets
+      t.integer :amount
+      t.string :phone_number
 
       t.timestamps
     end
