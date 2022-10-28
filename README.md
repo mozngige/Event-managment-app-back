@@ -1,5 +1,5 @@
 # Title 
-Event Ticket and Management system
+Event Ticket and Management system.
 
 # Description
 
