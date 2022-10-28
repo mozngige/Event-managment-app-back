@@ -3,7 +3,7 @@ Event Ticket and Management system.
 
 # Description
 
-This project is a simple responsive backend website that has ruby on rails as the backend
+This project is a simple responsive backend website that has ruby on rails as the backend.
 
 # Installation process 
 clone to the github Repo https://github.com/chwadoow/Event-managment-app-back Unzip the downloaded files in a folder of choice.Open the index file from the zipped file with any browser.
