@@ -42,7 +42,7 @@ event_category8 = Category.create(title:"Sport & Fitness",banner_img:"https://im
 
 # puts "Seeding user profile"
 
-# user_profile1 = UserProfile.create(user_id:user1.id,full_name:"Kihahu Mutaga",avatar_img: Faker::Avatar.image,phone_number:"0727249154",bio:"Learn rules like a pro and break them like an artist",gender:"male") 
+user_profile2 = UserProfile.create(user_id:user2.id,full_name:"Kihahu Mutaga",avatar_img: Faker::Avatar.image,phone_number:"0727249154",bio:"Learn rules like a pro and break them like an artist",gender:"male") 
 
 # user_profile2 = UserProfile.create(user_id:user2.id,full_name:"Jeska Jenipher",avatar_img: Faker::Avatar.image,phone_number:"07421480348",bio:"Bring your best shot",gender:"female") 
 
