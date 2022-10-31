@@ -21,12 +21,24 @@ default: &default
 
   # socket: /tmp/mysql.sock 
 
+  
+  
+
+
 
   # Mutaga's credentials
   # username: tasha
   # host: 127.0.0.1
   # socket: /tmp/mysql.sock
   # password: tashexc2754
+
+  username: frank
+  host: 127.0.0.1
+  password: Francis@1234
+  socket: /var/run/mysqld/mysqld.sock
+
+
+
 development:
   <<: *default
   host: 127.0.0.1 
@@ -37,3 +49,4 @@ production:
   database: api_eventful_production
   username: api_eventful
   password: <%= ENV["API_EVENTFUL_DATABASE_PASSWORD"] %>
+
