@@ -40,10 +40,10 @@ end
     end
 
     def ticket_params
-        params.permit(:ticket_no, :user_id, :event_id, :is_vip, :number_of_vip_tickets, :is_regular, :number_of_regular_tickets, :amount, :phone_number)
+        params.permit(:ticket_no, :user_id, :event_id, :number_of_vip_tickets, :number_of_regular_tickets, :amount, :phone_number)
     end
 
     def ticket_updateparams
-        params.permit(:is_vip, :number_of_vip_tickets, :is_regular, :number_of_regular_tickets)
+        params.permit(:number_of_vip_tickets, :number_of_regular_tickets)
     end
 end
