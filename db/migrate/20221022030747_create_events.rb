@@ -4,7 +4,6 @@ class CreateEvents < ActiveRecord::Migration[7.0]
       t.integer :category_id
       t.string :title
       t.date :event_date
-      t.time :event_time
       t.string :ticket_format
       t.date :early_booking_end_date
       t.time :early_booking_end_time
