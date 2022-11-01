@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_secure_password
-    has_one :user_profile
-    has_many :tickets
-    has_many :events, through: :tickets
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end

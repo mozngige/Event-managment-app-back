@@ -26,6 +26,8 @@ gem 'dotenv'
 
 gem 'phony_rails'
 
+gem 'devise', '~> 4.2'
+
 gem "faker"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]

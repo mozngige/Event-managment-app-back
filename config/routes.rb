@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :home_banners, only: [:index]
   resources :users, only: [:index, :create, :show]
   resources :communities, only: [:index, :create, :show]
@@ -6,7 +7,6 @@ Rails.application.routes.draw do
   resources :tickets
   resources :events
   resources :event_categories
-  resources :user_profiles
   resources :categories, only: [:index, :show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
