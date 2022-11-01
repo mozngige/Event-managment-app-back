@@ -22,7 +22,7 @@ default: &default
   # Mutaga's credentials
   username: tasha
   host: 127.0.0.1
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
   password: tashexc2754
 development:
   <<: *default
