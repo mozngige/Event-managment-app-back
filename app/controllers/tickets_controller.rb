@@ -3,22 +3,17 @@ class TicketsController < ApplicationController
         render json: Ticket.all, status: :ok
     end
 
-    def create
-        if params.present?
-            phone = PhonyRails.normalize_number(params[:phone_number],country_code: "KE").gsub(/\W/, "")
-            ticket = Ticket.new(ticket_params)
+   def create
+        if params[:CustomerMessage].present? 
+            render json: {message: "Check your phone"}
             
-            if ticket.save
-                render json:{ success: "payment was created, check mobile device"},status: :created
+        elsif params[:Body][:stkCallback][:CallbackMetadata][:Item].present?
+            
+             render json: {message: "You have successfully secured your seats."}
 
-            else
-                
-            render json: {error: "unsuccessful purchase,the payment failed"}
-
-            end
         else
-        render json: {error: "Invalid inputs"}
-    end
+             render json: {message: "Please try again Later"}
+        end
 end
 
     def update
