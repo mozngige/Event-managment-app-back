@@ -1,5 +1,5 @@
 class UserProfilesController < ApplicationController
-    before_action :authorized
+    # before_action :authorized
 
     def create
         user_profile= UserProfile.create!(user_profile_params)
