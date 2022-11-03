@@ -16,9 +16,8 @@ default: &default
   username: root
   password:
   # username: jeska
-  # password: jeska 
-  # socket: /tmp/mysql.sock 
-
+  # password: jeska
+  # socket: /tmp/mysql.sock
 
   # Mutaga's credentials
   # username: tasha
@@ -27,9 +26,10 @@ default: &default
   # password: tashexc2754
 development:
   <<: *default
-  host: 127.0.0.1 
-  database: without_devise
-
+  host: 127.0.0.1
+  database: ticketing_rails
+  username: tasha
+  password: tashexc2754
 production:
   <<: *default
   database: api_eventful_production
