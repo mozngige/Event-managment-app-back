@@ -1,30 +1,30 @@
 class EventsController < ApplicationController
-    skip_before_action :authorized, only: [:index]
-rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
+#     skip_before_action :authorized, only: [:index]
+# rescue_from ActiveRecord::RecordNotFound, with: :unfound_response
 
     def index 
     render json: Event.all,status: :ok
     end
     
     def show
-        event = find_event
-        render json: event, status: :ok
+        @event = find_event
+        render json: @event, status: :ok
     end
 
     def create
-        event = Event.create!(event_params)   
-        render json: event,status: :created
+        @event = Event.create!(event_params)   
+        render json: @event,status: :created
     end
 
     def update
-        event = find_event
-        event.update!(event_params)
-        render json: event,status: :accepted
+        @event = find_event
+        @event.update!(event_params)
+        render json: @event,status: :accepted
     end
 
     def destroy
-        event = find_event
-        event.destroy
+        @event = find_event
+        @event.destroy
         head :no_content
     end
 

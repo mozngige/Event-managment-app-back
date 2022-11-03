@@ -13,10 +13,7 @@ class CreateEvents < ActiveRecord::Migration[7.0]
       t.integer :vip_price
       t.integer :vip_no_of_tickets
       t.integer :regular_no_of_tickets
-      t.string :banner_img
       t.text :description
-      t.text :image_url1
-      t.text :image_url2
       t.belongs_to :category, foreign_key: true
 
       t.timestamps
