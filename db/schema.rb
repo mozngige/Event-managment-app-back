@@ -33,13 +33,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_111518) do
   end
 
   create_table "events", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.integer "category_id"
     t.string "title"
-    t.date "event_date"
-    t.time "event_time"
+    t.datetime "event_start_date"
+    t.datetime "event_end_date"
     t.string "ticket_format"
-    t.date "early_booking_end_date"
-    t.time "early_booking_end_time"
+    t.datetime "early_booking_end_date"
     t.integer "early_booking_price_regular"
     t.integer "early_booking_price_vip"
     t.string "location"
@@ -48,11 +46,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_111518) do
     t.integer "vip_no_of_tickets"
     t.integer "regular_no_of_tickets"
     t.string "banner_img"
-    t.string "description"
-    t.string "image_url1"
-    t.string "image_url2"
+    t.text "description"
+    t.text "image_url1"
+    t.text "image_url2"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_events_on_category_id"
   end
 
   create_table "home_banners", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -94,4 +94,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_111518) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "events", "categories"
 end
