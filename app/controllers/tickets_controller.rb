@@ -5,7 +5,11 @@ class TicketsController < ApplicationController
 
     def create
         ticket = Ticket.create!(ticket_params)
-        render json: ticket,status: :created
+        # if ticket.save
+        # TicketMailer.with(ticket: ticket_no, user: user_id).welcome_email.deliver_later
+        # render json: ticket,status: :created
+        # else 
+            render json:{message: "You have successfully booked your ticket"}
     end
 
     def update
@@ -27,10 +31,10 @@ class TicketsController < ApplicationController
     end
 
     def ticket_params
-        params.permit(:ticket_no, :user_id, :event_id, :is_vip, :number_of_vip_tickets, :is_regular, :number_of_regular_tickets)
+        params.permit(:ticket_no, :user_id, :event_id, :number_of_vip_tickets,:number_of_regular_tickets)
     end
 
     def ticket_updateparams
-        params.permit(:is_vip, :number_of_vip_tickets, :is_regular, :number_of_regular_tickets)
+        params.permit(:number_of_vip_tickets,:number_of_regular_tickets)
     end
 end
