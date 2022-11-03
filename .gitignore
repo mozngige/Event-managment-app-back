@@ -1,3 +1,7 @@
 /tmp/pids/server.pid
 /log/development.log
 /db/schema.rb
+/test/mailers
+/app/views/layouts
+/app/views
+/app/mailers
