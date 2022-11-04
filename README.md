@@ -8,7 +8,7 @@ The builders of this project are as follows: Mutagah Kihahu,Jessica Jennifer,Kei
 
 This project is a simple responsive backend website that has ruby on rails as the backend.
 
-# Installation process 
+# INSTALLATION PROCESS
 clone to the github Repo https://github.com/chwadoow/Event-managment-app-back Unzip the downloaded files in a folder of choice.Open the index file from the zipped file with any browser.
 
 # Technology used
