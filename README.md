@@ -11,7 +11,7 @@ This project is a simple responsive backend website that has ruby on rails as th
 # INSTALLATION PROCESS.
 clone to the github Repo https://github.com/chwadoow/Event-managment-app-back Unzip the downloaded files in a folder of choice.Open the index file from the zipped file with any browser.
 
-# TECHNOLOGY USED
+# TECHNOLOGY USED.
 ruby on rails- it was used in creating rails API
 
 
