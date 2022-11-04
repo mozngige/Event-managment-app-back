@@ -40,17 +40,17 @@ event_category7 = Category.create(title:"Sciences",banner_img:"https://png.pngtr
 event_category8 = Category.create(title:"Sport & Fitness",banner_img:"https://img.freepik.com/free-psd/sport-tech-social-media-post-template_23-2148523619.jpg?w=1380&t=st=1666406214~exp=1666406814~hmac=d4dcedec12b55d94f4828c85f98e6d3a7a86022db951fc0532c1009e942d7c04")
 
 
-# puts "Seeding user profile"
+puts "Seeding user profile"
 
-# user_profile2 = UserProfile.create(user_id:user2.id,full_name:"Kihahu Mutaga",avatar_img: Faker::Avatar.image,phone_number:"0727249154",bio:"Learn rules like a pro and break them like an artist",gender:"male") 
+user_profile1 = UserProfile.create(user_id:user1.id,full_name:"Kihahu Mutaga",avatar_img: Faker::Avatar.image,phone_number:"0727249154",bio:"Learn rules like a pro and break them like an artist",gender:"male") 
 
-# user_profile2 = UserProfile.create(user_id:user2.id,full_name:"Jeska Jenipher",avatar_img: Faker::Avatar.image,phone_number:"07421480348",bio:"Bring your best shot",gender:"female") 
+user_profile2 = UserProfile.create(user_id:user2.id,full_name:"Jeska Jenipher",avatar_img: Faker::Avatar.image,phone_number:"07421480348",bio:"Bring your best shot",gender:"female") 
 
-# user_profile3 = UserProfile.create(user_id:user3.id,full_name:"Keith Wesley",avatar_img: Faker::Avatar.image, phone_number:"0726842187",bio:"I talk to the future",gender:"male") 
+user_profile3 = UserProfile.create(user_id:user3.id,full_name:"Keith Wesley",avatar_img: Faker::Avatar.image, phone_number:"0726842187",bio:"I talk to the future",gender:"male") 
 
-# user_profile4 = UserProfile.create(user_id:user4.id,full_name:"Nyale Mwasaha",avatar_img: Faker::Avatar.image, phone_number:"0727979657", bio:"Take memories leave footprints", gender:"male") 
+user_profile4 = UserProfile.create(user_id:user4.id,full_name:"Nyale Mwasaha",avatar_img: Faker::Avatar.image, phone_number:"0727979657", bio:"Take memories leave footprints", gender:"male") 
 
-# user_profile5 = UserProfile.create(user_id:user5.id,full_name:"Francis Kibira",avatar_img: Faker::Avatar.image, phone_number: "0700595184",bio:"Have fun when you still can have",gender:"male")
+user_profile5 = UserProfile.create(user_id:user5.id,full_name:"Francis Kibira",avatar_img: Faker::Avatar.image, phone_number: "0700595184",bio:"Have fun when you still can have",gender:"male")
 
 puts "Seeding events tables"
 
