@@ -4,7 +4,7 @@ Event Ticket and Management system.
 # BUILDERS.
 The builders of this project are as follows: Mutagah Kihahu,Jessica Jennifer,Keith Wesley,Moses Ngige and Francis Kibira
 
-# DESCRIPTION
+# DESCRIPTION.
 
 This project is a simple responsive backend website that has ruby on rails as the backend.
 
