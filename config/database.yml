@@ -19,10 +19,6 @@ default: &default
   # password: jeska 
   # socket: /tmp/mysql.sock 
 
-  
-  
-
-
 
   # Mutaga's credentials
   # username: tasha
@@ -39,4 +35,3 @@ production:
   database: api_eventful_production
   username: api_eventful
   password: <%= ENV["API_EVENTFUL_DATABASE_PASSWORD"] %>
-
