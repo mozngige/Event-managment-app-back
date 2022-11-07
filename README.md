@@ -1,3 +1,4 @@
+
 # TITLE.
 Event Ticket and Management system.
 
@@ -23,3 +24,6 @@ ruby on rails- it was used in creating rails API
 
 
 
+
+This README would normally document whatever steps are necessary to get the
+application up and runnin

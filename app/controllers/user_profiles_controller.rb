@@ -14,7 +14,7 @@ class UserProfilesController < ApplicationController
     
     def update
         user_profile = find_profile
-        user_profile.update(user_params)
+        user_profile.update(user_profile_params)
         render json: user_profile
     end
 
